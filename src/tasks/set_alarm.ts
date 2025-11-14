@@ -26,6 +26,12 @@ export type SetAlarmTaskOptions = {
   sound?: AudioEntry;
   /** Default: `false`. this is passed to notification options. */
   isReminder?: Boolean;
+  /** Default: `false`. this is passed to notification options. */
+  isPrayerMode?: Boolean;
+  /** action for prayer mode: 'start' or 'end' */
+  modeAction?: 'start' | 'end';
+  /** vibration on call for prayer mode */
+  vibrationOnCall?: boolean;
   /** which prayer this is about */
   prayer: Prayer;
   /** Alarm type to use with alarm manager */

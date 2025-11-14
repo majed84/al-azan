@@ -12,9 +12,12 @@ import {
 } from './modules/activity';
 import {isSilent} from './modules/media_player';
 import {Reminder, reminderSettings} from './store/reminder';
+import {PrayerMode, modesSettings} from './store/modes';
 import {settings} from './store/settings';
+import {SoundModeService} from './services/sound_mode_service';
 import {SetPreAlarmTaskOptions} from './tasks/set_pre_alarm';
 import {setReminders} from './tasks/set_reminder';
+import {setPrayerModes} from './tasks/set_prayer_mode';
 import {
   dismissRamadanNoticeForThisYear,
   dontShowRamadanNoticeAgain,
@@ -28,6 +31,7 @@ import {
   IMPORTANT_CHANNEL_ID,
   PRE_ADHAN_CHANNEL_ID,
   PRE_REMINDER_CHANNEL_ID,
+  PRAYER_MODE_CHANNEL_ID,
   RAMADAN_NOTICE_NOTIFICATION_ID,
   REMINDER_CHANNEL_ID,
   REMINDER_DND_CHANNEL_ID,
@@ -164,6 +168,7 @@ async function handleNotification({
       REMINDER_DND_CHANNEL_ID,
       PRE_ADHAN_CHANNEL_ID,
       PRE_REMINDER_CHANNEL_ID,
+      PRAYER_MODE_CHANNEL_ID,
     ].includes(channelId)
   ) {
     const options = getAlarmOptions(notification)!;
@@ -224,6 +229,20 @@ async function handleNotification({
           reminderSettings.getState().disableReminder({id: options.notifId});
         }
         await setReminders();
+      } else if (channelId === PRAYER_MODE_CHANNEL_ID) {
+        // معالجة الأوضاع
+        if (options.isPrayerMode) {
+          if (options.modeAction === 'start') {
+            await SoundModeService.enableSilentMode(options.vibrationOnCall || false);
+          } else if (options.modeAction === 'end') {
+            await SoundModeService.disableSilentMode();
+          }
+          
+          if ((options as Pick<PrayerMode, 'once'>).once) {
+            modesSettings.getState().disableMode({id: options.notifId.replace('mode-start-', '').replace('mode-end-', '')});
+          }
+        }
+        await setPrayerModes();
       }
     } else if (type !== EventType.TRIGGER_NOTIFICATION_CREATED) {
       const {pressAction} = detail;

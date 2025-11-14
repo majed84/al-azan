@@ -42,10 +42,13 @@ import {FixCommonProblemsSettings} from '@/screens/settings_fix_common_problems'
 import {LocationSettings} from '@/screens/settings_location';
 import {NotificationSettings} from '@/screens/settings_notifications';
 import {RemindersSettings} from '@/screens/settings_reminders';
+import {ModesSettings} from '@/screens/settings_modes';
 import {WidgetSettings} from '@/screens/settings_widget';
 import {settings} from '@/store/settings';
 import {setNextAdhan} from '@/tasks/set_next_adhan';
 import {setReminders} from '@/tasks/set_reminder';
+import {setPrayerModes} from '@/tasks/set_prayer_mode';
+import {createNotificationChannels} from '@/services/notification_channels';
 import {setUpdateWidgetsAlarms} from '@/tasks/set_update_widgets_alarms';
 import {updateWidgets} from '@/tasks/update_widgets';
 
@@ -95,8 +98,10 @@ export function App(): React.JSX.Element {
   );
 
   useEffect(() => {
+    createNotificationChannels();
     setNextAdhan();
     setReminders();
+    setPrayerModes();
     setUpdateWidgetsAlarms();
     updateWidgets();
   }, []);
@@ -209,6 +214,10 @@ export function App(): React.JSX.Element {
           <Stack.Screen
             name="RemindersSettings"
             component={RemindersSettings}
+          />
+          <Stack.Screen
+            name="ModesSettings"
+            component={ModesSettings}
           />
           <Stack.Screen name="AboutSettings" component={AboutSettings} />
           <Stack.Screen name="DevSettings" component={DevSettings} />

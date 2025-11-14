@@ -11,6 +11,7 @@ import {ExploreIcon} from '@/assets/icons/material_icons/explore';
 import {InfoIcon} from '@/assets/icons/material_icons/info';
 import {NotificationsActiveIcon} from '@/assets/icons/material_icons/notifications_active';
 import {SaveIcon} from '@/assets/icons/material_icons/save';
+import {SettingsIcon} from '@/assets/icons/material_icons/settings';
 import {VolumeUpIcon} from '@/assets/icons/material_icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/material_icons/widget';
 import {SafeArea} from '@/components/safe_area';
@@ -59,6 +60,10 @@ const settingsScreenList: ScreenListItem[] = [
   {
     name: 'RemindersSettings',
     icon: AlarmIcon,
+  },
+  {
+    name: 'ModesSettings',
+    icon: SettingsIcon,
   },
   {
     name: 'AboutSettings',

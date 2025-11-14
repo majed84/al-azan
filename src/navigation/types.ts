@@ -18,6 +18,7 @@ export type RootStackParamList = {
   FixCommonProblemsSettings: undefined;
   WidgetSettings: undefined;
   RemindersSettings: undefined;
+  ModesSettings: undefined;
   AboutSettings: undefined;
   DevSettings: undefined;
   QiblaFinder: undefined;
@@ -109,6 +110,11 @@ const routeTranslations = {
   RemindersSettings: defineMessage({
     id: 'reminders_settings',
     message: 'Reminders',
+    comment: 'screen title',
+  }),
+  ModesSettings: defineMessage({
+    id: 'modes_settings',
+    message: 'Prayer Modes',
     comment: 'screen title',
   }),
   AboutSettings: defineMessage({

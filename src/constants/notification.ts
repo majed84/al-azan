@@ -18,6 +18,8 @@ export const REMINDER_CHANNEL_ID = 'reminder-channel-1';
 export const REMINDER_DND_CHANNEL_ID = 'reminder-dnd-channel-1';
 export const PRE_REMINDER_CHANNEL_ID = 'pre-reminder-channel';
 
+export const PRAYER_MODE_CHANNEL_ID = 'prayer-mode-channel-1';
+
 export const IMPORTANT_CHANNEL_ID = 'important-channel';
 export const RAMADAN_NOTICE_NOTIFICATION_ID = 'ramadan-notice-notification';
 
@@ -45,6 +47,10 @@ export const channelNameTranslations = {
   PRE_REMINDER_CHANNEL_NAME: defineMessage({
     id: 'PRE_REMINDER_CHANNEL_NAME',
     message: 'Upcoming reminder',
+  }),
+  PRAYER_MODE_CHANNEL_NAME: defineMessage({
+    id: 'PRAYER_MODE_CHANNEL_NAME',
+    message: 'Prayer Mode',
   }),
   IMPORTANT_CHANNEL_ID: defineMessage({
     id: 'IMPORTANT_CHANNEL_ID',
