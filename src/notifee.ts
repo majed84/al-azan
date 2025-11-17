@@ -233,9 +233,15 @@ async function handleNotification({
         // معالجة الأوضاع
         if (options.isPrayerMode) {
           if (options.modeAction === 'start') {
-            await SoundModeService.enableSilentMode(options.vibrationOnCall || false);
+            const success = await SoundModeService.enableSilentMode(options.vibrationOnCall || false);
+            if (!success) {
+              console.log('Failed to enable silent mode - permissions not granted');
+            }
           } else if (options.modeAction === 'end') {
-            await SoundModeService.disableSilentMode();
+            const success = await SoundModeService.disableSilentMode();
+            if (!success) {
+              console.log('Failed to disable silent mode - permissions not granted');
+            }
           }
           
           if ((options as Pick<PrayerMode, 'once'>).once) {

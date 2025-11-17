@@ -335,6 +335,22 @@ msgstr "تم تحديث الإحداثيات"
 msgid "Copy"
 msgstr "نسخ"
 
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Add Mode"
+msgstr "إضافة وضع"
+
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Grant Permissions"
+msgstr "منح الصلاحيات"
+
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Permissions OK"
+msgstr "الصلاحيات موافق عليها"
+
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Silent mode requires system permissions to work properly"
+msgstr "الوضع الصامت يتطلب صلاحيات النظام للعمل بشكل صحيح"
+
 #: src/screens/qada_counter/edit_counter_modal.tsx:145
 msgid "Count"
 msgstr "عدد"
