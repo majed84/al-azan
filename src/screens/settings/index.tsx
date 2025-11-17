@@ -11,7 +11,7 @@ import {ExploreIcon} from '@/assets/icons/material_icons/explore';
 import {InfoIcon} from '@/assets/icons/material_icons/info';
 import {NotificationsActiveIcon} from '@/assets/icons/material_icons/notifications_active';
 import {SaveIcon} from '@/assets/icons/material_icons/save';
-import {SettingsIcon} from '@/assets/icons/material_icons/settings';
+import {NotificationsOffIcon} from '@/assets/icons/material_icons/notifications_off';
 import {VolumeUpIcon} from '@/assets/icons/material_icons/volume_up';
 import {WidgetIcon} from '@/assets/icons/material_icons/widget';
 import {SafeArea} from '@/components/safe_area';
@@ -63,7 +63,7 @@ const settingsScreenList: ScreenListItem[] = [
   },
   {
     name: 'ModesSettings',
-    icon: SettingsIcon,
+    icon: NotificationsOffIcon,
   },
   {
     name: 'AboutSettings',

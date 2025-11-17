@@ -1888,6 +1888,10 @@ msgstr "راغب مصطفى غلوش"
 msgid "reminders_settings"
 msgstr "التذكيرات"
 
+#: src/navigation/types.ts:113
+msgid "modes_settings"
+msgstr "الوضع الصامت"
+
 #: src/navigation/types.ts:46
 msgid "settings"
 msgstr "إعدادات"

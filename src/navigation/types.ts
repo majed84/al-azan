@@ -114,7 +114,7 @@ const routeTranslations = {
   }),
   ModesSettings: defineMessage({
     id: 'modes_settings',
-    message: 'Prayer Modes',
+    message: 'Silent Mode',
     comment: 'screen title',
   }),
   AboutSettings: defineMessage({
