@@ -50,7 +50,7 @@ export const channelNameTranslations = {
   }),
   PRAYER_MODE_CHANNEL_NAME: defineMessage({
     id: 'PRAYER_MODE_CHANNEL_NAME',
-    message: 'Prayer Mode',
+    message: 'Silent Mode',
   }),
   IMPORTANT_CHANNEL_ID: defineMessage({
     id: 'IMPORTANT_CHANNEL_ID',

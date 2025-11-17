@@ -89,7 +89,7 @@ export function ModesSettings(props: IStackProps) {
         <HStack mx="2" mt="2" space={2}>
           <Button
             flex={1}
-            onPress={onAddModePressed}>{t`Add Mode`}</Button>
+            onPress={onAddModePressed}>{t`Add Silent Mode`}</Button>
           <Button
             flex={1}
             variant={hasPermissions ? 'solid' : 'outline'}

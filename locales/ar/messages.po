@@ -336,8 +336,8 @@ msgid "Copy"
 msgstr "نسخ"
 
 #: src/screens/settings_modes/index.tsx:XX
-msgid "Add Mode"
-msgstr "إضافة وضع"
+msgid "Add Silent Mode"
+msgstr "إضافة وضع صامت"
 
 #: src/screens/settings_modes/index.tsx:XX
 msgid "Grant Permissions"
@@ -1158,6 +1158,10 @@ msgstr "خريطة القبلة غير متوفرة حاليًا في نسخ F-D
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "تذكير"
 
+#: src/constants/notification.ts:XX
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "الوضع الصامت"
+
 #: src/utils/ramadan.ts:61
 msgid "Ramadan is ending,"
 msgstr "شهر رمضان ينتهي،"
@@ -1907,6 +1911,50 @@ msgstr "التذكيرات"
 #: src/navigation/types.ts:113
 msgid "modes_settings"
 msgstr "الوضع الصامت"
+
+#: src/navigation/types.ts:113
+msgid "Silent Mode"
+msgstr "الوضع الصامت"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Edit Silent Mode"
+msgstr "تعديل الوضع الصامت"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "New Silent Mode"
+msgstr "وضع صامت جديد"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Silent Mode Name"
+msgstr "اسم الوضع الصامت"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Start before prayer (minutes)"
+msgstr "البدء قبل الصلاة (دقائق)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "End after prayer (minutes)"
+msgstr "الانتهاء بعد الصلاة (دقائق)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Vibration on call"
+msgstr "اهتزاز عند المكالمة"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Started"
+msgstr "تم تفعيل الوضع الصامت"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Ended"
+msgstr "تم إنهاء الوضع الصامت"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent mode activated"
+msgstr "تم تفعيل الوضع الصامت"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Normal mode restored"
+msgstr "تم استعادة الوضع العادي"
 
 #: src/navigation/types.ts:46
 msgid "settings"

@@ -104,7 +104,7 @@ export async function setPrayerModes(options?: SetPrayerModeOptions) {
 
     // جدولة بداية الوضع
     const startModeOptions: SetAlarmTaskOptions & {once?: boolean} = {
-      title: t`Prayer Mode Started`,
+      title: t`Silent Mode Started`,
       body: mode.label,
       subtitle: t`Silent mode activated`,
       date: startTriggerDate,
@@ -122,7 +122,7 @@ export async function setPrayerModes(options?: SetPrayerModeOptions) {
 
     // جدولة انتهاء الوضع
     const endModeOptions: SetAlarmTaskOptions & {once?: boolean} = {
-      title: t`Prayer Mode Ended`,
+      title: t`Silent Mode Ended`,
       body: mode.label,
       subtitle: t`Normal mode restored`,
       date: endTriggerDate,

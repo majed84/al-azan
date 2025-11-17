@@ -105,7 +105,7 @@ export function EditModeModal({
               borderBottomColor: 'coolGray.300',
             }}>
             <Stack px="3" flexDirection="row" alignItems="center" flex={1}>
-              <Text>{editMode ? t`Edit Mode` : t`New Mode`}</Text>
+              <Text>{editMode ? t`Edit Silent Mode` : t`New Silent Mode`}</Text>
             </Stack>
             <Button
               onPress={onCancel}
@@ -116,7 +116,7 @@ export function EditModeModal({
           </HStack>
           <VStack p="3">
             <FormControl>
-              <FormControl.Label>{t`Mode Name`}:</FormControl.Label>
+              <FormControl.Label>{t`Silent Mode Name`}:</FormControl.Label>
               <Input
                 value={draftModeState?.label || ''}
                 onChangeText={text =>
