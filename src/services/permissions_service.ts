@@ -1,5 +1,4 @@
-import {Alert, Linking, NativeModules, Platform} from 'react-native';
-import {check, request, PERMISSIONS, RESULTS} from 'react-native-permissions';
+import {Alert, Linking, NativeModules, Platform, PermissionsAndroid} from 'react-native';
 
 const {SystemSetting} = NativeModules;
 
@@ -25,8 +24,10 @@ export class PermissionsService {
     if (Platform.OS !== 'android') return false;
     
     try {
-      const result = await check(PERMISSIONS.ANDROID.MODIFY_AUDIO_SETTINGS);
-      return result === RESULTS.GRANTED;
+      const result = await PermissionsAndroid.check(
+        PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS
+      );
+      return result;
     } catch (error) {
       console.error('Error checking audio settings permission:', error);
       return false;
@@ -40,8 +41,17 @@ export class PermissionsService {
     if (Platform.OS !== 'android') return false;
     
     try {
-      const result = await request(PERMISSIONS.ANDROID.MODIFY_AUDIO_SETTINGS);
-      return result === RESULTS.GRANTED;
+      const result = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS,
+        {
+          title: 'صلاحية تعديل الصوت',
+          message: 'يحتاج التطبيق إلى صلاحية تعديل إعدادات الصوت لتفعيل الوضع الصامت',
+          buttonNeutral: 'اسأل لاحقاً',
+          buttonNegative: 'إلغاء',
+          buttonPositive: 'موافق',
+        }
+      );
+      return result === PermissionsAndroid.RESULTS.GRANTED;
     } catch (error) {
       console.error('Error requesting audio settings permission:', error);
       return false;

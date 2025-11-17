@@ -18,7 +18,6 @@ import com.github.meypod.al_azan.modules.MediaPlayerModulePackage
 import com.github.meypod.al_azan.modules.NotificationWidgetModulePackage
 import com.github.meypod.al_azan.modules.ScreenWidgetModulePackage
 import org.wonday.orientation.OrientationActivityLifecycle
-import com.zoontek.rnpermissions.RNPermissionsPackage
 
 class MainApplication : Application(), ReactApplication {
     override val reactNativeHost: ReactNativeHost =
@@ -33,7 +32,6 @@ class MainApplication : Application(), ReactApplication {
                     add(NotificationWidgetModulePackage())
                     add(ScreenWidgetModulePackage())
                     add(CompassModulePackage())
-                    add(RNPermissionsPackage())
                 }
 
             override fun getJSMainModuleName(): String = "index"
