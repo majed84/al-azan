@@ -2,9 +2,7 @@ import {t} from '@lingui/macro';
 import notifee, {AlarmType} from '@notifee/react-native';
 import {setAlarmTask, SetAlarmTaskOptions} from './set_alarm';
 import {getNextPrayerByDays} from '@/adhan';
-import {
-  PRAYER_MODE_CHANNEL_ID,
-} from '@/constants/notification';
+import {PRAYER_MODE_CHANNEL_ID} from '@/constants/notification';
 import {modesSettings, PrayerMode} from '@/store/modes';
 import {settings} from '@/store/settings';
 import {canScheduleNotifications} from '@/utils/permission';
@@ -36,16 +34,13 @@ export async function setPrayerModes(options?: SetPrayerModeOptions) {
     if (force) {
       modeIdsToCancel = modes.flatMap(m => [
         getModeStartNotifId(m.id),
-        getModeEndNotifId(m.id)
+        getModeEndNotifId(m.id),
       ]);
       settings.getState().deleteTimestamps(modeIdsToCancel);
     } else {
       modeIdsToCancel = modes
         .filter(m => !m.enabled)
-        .flatMap(m => [
-          getModeStartNotifId(m.id),
-          getModeEndNotifId(m.id)
-        ]);
+        .flatMap(m => [getModeStartNotifId(m.id), getModeEndNotifId(m.id)]);
     }
     await notifee.cancelAllNotifications(modeIdsToCancel).catch(console.error);
   }
@@ -90,7 +85,7 @@ export async function setPrayerModes(options?: SetPrayerModeOptions) {
         prayers: [mode.prayer],
       });
       if (!prayerTime) continue;
-      
+
       startTriggerDate = new Date(
         prayerTime.date.valueOf() - mode.startDuration * 60 * 1000,
       );

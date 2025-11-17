@@ -233,19 +233,31 @@ async function handleNotification({
         // معالجة الأوضاع
         if (options.isPrayerMode) {
           if (options.modeAction === 'start') {
-            const success = await SoundModeService.enableSilentMode(options.vibrationOnCall || false);
+            const success = await SoundModeService.enableSilentMode(
+              options.vibrationOnCall || false,
+            );
             if (!success) {
-              console.log('Failed to enable silent mode - permissions not granted');
+              console.log(
+                'Failed to enable silent mode - permissions not granted',
+              );
             }
           } else if (options.modeAction === 'end') {
             const success = await SoundModeService.disableSilentMode();
             if (!success) {
-              console.log('Failed to disable silent mode - permissions not granted');
+              console.log(
+                'Failed to disable silent mode - permissions not granted',
+              );
             }
           }
-          
+
           if ((options as Pick<PrayerMode, 'once'>).once) {
-            modesSettings.getState().disableMode({id: options.notifId.replace('mode-start-', '').replace('mode-end-', '')});
+            modesSettings
+              .getState()
+              .disableMode({
+                id: options.notifId
+                  .replace('mode-start-', '')
+                  .replace('mode-end-', ''),
+              });
           }
         }
         await setPrayerModes();

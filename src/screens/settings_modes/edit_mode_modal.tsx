@@ -147,7 +147,9 @@ export function EditModeModal({
             </FormControl>
 
             <FormControl>
-              <FormControl.Label>{t`Start before prayer (minutes)`}:</FormControl.Label>
+              <FormControl.Label>
+                {t`Start before prayer (minutes)`}:
+              </FormControl.Label>
               <NumericInput
                 int
                 invalidValue={5}
@@ -157,7 +159,9 @@ export function EditModeModal({
             </FormControl>
 
             <FormControl>
-              <FormControl.Label>{t`End after prayer (minutes)`}:</FormControl.Label>
+              <FormControl.Label>
+                {t`End after prayer (minutes)`}:
+              </FormControl.Label>
               <NumericInput
                 int
                 invalidValue={5}
@@ -168,7 +172,7 @@ export function EditModeModal({
 
             <FormControl>
               <FormControl.Label>{t`Options`}:</FormControl.Label>
-              
+
               <HStack alignItems="center" justifyContent="space-between" mb="2">
                 <Text flexShrink={1}>{t`Vibration on call`}</Text>
                 <Switch

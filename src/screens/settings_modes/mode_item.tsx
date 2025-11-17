@@ -27,13 +27,13 @@ export type ModeItemProps = {
 
 export function getModeSubtitle(mode: PrayerMode) {
   const prayer = translatePrayer(mode.prayer);
-  
+
   let subtitle = t`${mode.startDuration} min before ${prayer} - ${mode.endDuration} min after`;
-  
+
   if (mode.vibrationOnCall) {
     subtitle += ` (${t`Vibration on call`})`;
   }
-  
+
   if (mode.once) {
     subtitle += ` (${t`Once`})`;
   }

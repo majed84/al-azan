@@ -40,10 +40,7 @@ export type ModesStore = {
   saveMode: (mode: PrayerMode) => void;
   deleteMode: (mode: Pick<PrayerMode, 'id'>) => void;
   disableMode: (mode: Pick<PrayerMode, 'id'>) => void;
-  setSetting: <T extends keyof ModesStore>(
-    key: T,
-    val: ModesStore[T],
-  ) => void;
+  setSetting: <T extends keyof ModesStore>(key: T, val: ModesStore[T]) => void;
   removeSetting: (key: keyof ModesStore) => () => void;
 };
 
@@ -96,10 +93,7 @@ export const modesSettings = createStore<ModesStore>()(
           }),
         ),
 
-      setSetting: <T extends keyof ModesStore>(
-        key: T,
-        val: ModesStore[T],
-      ) =>
+      setSetting: <T extends keyof ModesStore>(key: T, val: ModesStore[T]) =>
         set(
           produce<ModesStore>(draft => {
             if (invalidKeys.includes(key)) return;
@@ -134,8 +128,5 @@ export function useModesSettings<T extends keyof ModesStore>(key: T) {
     (val: ModesStore[T]) => setSetting(key, val),
     [key, setSetting],
   );
-  return [state, setCallback] as [
-    ModesStore[T],
-    (val: ModesStore[T]) => void,
-  ];
+  return [state, setCallback] as [ModesStore[T], (val: ModesStore[T]) => void];
 }

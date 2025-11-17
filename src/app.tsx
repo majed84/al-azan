@@ -215,10 +215,7 @@ export function App(): React.JSX.Element {
             name="RemindersSettings"
             component={RemindersSettings}
           />
-          <Stack.Screen
-            name="ModesSettings"
-            component={ModesSettings}
-          />
+          <Stack.Screen name="ModesSettings" component={ModesSettings} />
           <Stack.Screen name="AboutSettings" component={AboutSettings} />
           <Stack.Screen name="DevSettings" component={DevSettings} />
         </Stack.Group>

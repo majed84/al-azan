@@ -10,14 +10,16 @@ export class SoundModeService {
   /**
    * تفعيل الوضع الصامت
    */
-  static async enableSilentMode(vibrationOnCall: boolean = false): Promise<boolean> {
+  static async enableSilentMode(
+    vibrationOnCall: boolean = false,
+  ): Promise<boolean> {
     try {
       // التحقق من الصلاحيات أولاً
       const permissions = await PermissionsService.checkAllPermissions();
-      
+
       if (!permissions.allGranted) {
         console.log('Missing permissions for silent mode');
-        
+
         // إظهار رسالة للمستخدم
         Alert.alert(
           'صلاحيات مطلوبة',
@@ -33,7 +35,7 @@ export class SoundModeService {
             },
           ],
         );
-        
+
         return false;
       }
 
@@ -51,15 +53,15 @@ export class SoundModeService {
       } else {
         await SystemSetting.setRingerMode(0); // RINGER_MODE_SILENT
       }
-      
+
       // تقليل مستوى الصوت
       await SystemSetting.setVolume(0);
-      
+
       console.log('Silent mode enabled with vibration:', vibrationOnCall);
       return true;
     } catch (error) {
       console.error('Error enabling silent mode:', error);
-      
+
       // إظهار رسالة خطأ للمستخدم
       Alert.alert(
         'خطأ',
@@ -74,7 +76,7 @@ export class SoundModeService {
           },
         ],
       );
-      
+
       return false;
     }
   }
@@ -86,7 +88,7 @@ export class SoundModeService {
     try {
       // التحقق من الصلاحيات
       const permissions = await PermissionsService.checkAllPermissions();
-      
+
       if (!permissions.allGranted) {
         console.log('Missing permissions to restore audio settings');
         return false;
@@ -97,12 +99,12 @@ export class SoundModeService {
         await SystemSetting.setRingerMode(this.originalRingerMode);
         this.originalRingerMode = null;
       }
-      
+
       if (this.originalVolume !== null) {
         await SystemSetting.setVolume(this.originalVolume);
         this.originalVolume = null;
       }
-      
+
       console.log('Silent mode disabled, settings restored');
       return true;
     } catch (error) {

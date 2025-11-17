@@ -1,4 +1,10 @@
-import {Alert, Linking, NativeModules, Platform, PermissionsAndroid} from 'react-native';
+import {
+  Alert,
+  Linking,
+  NativeModules,
+  Platform,
+  PermissionsAndroid,
+} from 'react-native';
 
 const {SystemSetting} = NativeModules;
 
@@ -8,7 +14,7 @@ export class PermissionsService {
    */
   static async canModifySystemSettings(): Promise<boolean> {
     if (Platform.OS !== 'android') return false;
-    
+
     try {
       return await SystemSetting.canWrite();
     } catch (error) {
@@ -22,10 +28,10 @@ export class PermissionsService {
    */
   static async canModifyAudioSettings(): Promise<boolean> {
     if (Platform.OS !== 'android') return false;
-    
+
     try {
       const result = await PermissionsAndroid.check(
-        PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS
+        PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS,
       );
       return result;
     } catch (error) {
@@ -39,17 +45,18 @@ export class PermissionsService {
    */
   static async requestAudioSettingsPermission(): Promise<boolean> {
     if (Platform.OS !== 'android') return false;
-    
+
     try {
       const result = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS,
         {
           title: 'صلاحية تعديل الصوت',
-          message: 'يحتاج التطبيق إلى صلاحية تعديل إعدادات الصوت لتفعيل الوضع الصامت',
+          message:
+            'يحتاج التطبيق إلى صلاحية تعديل إعدادات الصوت لتفعيل الوضع الصامت',
           buttonNeutral: 'اسأل لاحقاً',
           buttonNegative: 'إلغاء',
           buttonPositive: 'موافق',
-        }
+        },
       );
       return result === PermissionsAndroid.RESULTS.GRANTED;
     } catch (error) {
@@ -63,7 +70,7 @@ export class PermissionsService {
    */
   static async requestSystemSettingsPermission(): Promise<void> {
     if (Platform.OS !== 'android') return;
-    
+
     Alert.alert(
       'صلاحية مطلوبة',
       'يحتاج التطبيق إلى صلاحية تعديل إعدادات النظام لتفعيل الوضع الصامت. سيتم توجيهك إلى الإعدادات.',
@@ -98,7 +105,7 @@ export class PermissionsService {
   }> {
     const canModifyAudio = await this.canModifyAudioSettings();
     const canModifySystem = await this.canModifySystemSettings();
-    
+
     return {
       canModifyAudio,
       canModifySystem,
@@ -112,15 +119,15 @@ export class PermissionsService {
   static async requestAllPermissions(): Promise<boolean> {
     // طلب صلاحية الصوت أولاً
     const audioGranted = await this.requestAudioSettingsPermission();
-    
+
     // التحقق من صلاحية النظام
     const systemGranted = await this.canModifySystemSettings();
-    
+
     if (!systemGranted) {
       await this.requestSystemSettingsPermission();
       return false; // المستخدم يحتاج للذهاب للإعدادات يدوياً
     }
-    
+
     return audioGranted && systemGranted;
   }
 

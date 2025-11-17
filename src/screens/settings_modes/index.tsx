@@ -5,18 +5,14 @@ import {ListRenderItemInfo} from 'react-native';
 import {SafeArea} from '@/components/safe_area';
 import {EditModeModal} from '@/screens/settings_modes/edit_mode_modal';
 import ModeItem from '@/screens/settings_modes/mode_item';
-import {
-  PrayerMode,
-  modesSettings,
-  useModesSettings,
-} from '@/store/modes';
+import {PrayerMode, modesSettings, useModesSettings} from '@/store/modes';
 import {setPrayerModes} from '@/tasks/set_prayer_mode';
 
 export function ModesSettings(props: IStackProps) {
   const [modeEntries] = useModesSettings('PRAYER_MODES');
-  const [creatingMode, setCreatingMode] =
-    useState<Partial<PrayerMode> | null>(null);
-
+  const [creatingMode, setCreatingMode] = useState<Partial<PrayerMode> | null>(
+    null,
+  );
 
   const onAddModePressed = () => {
     setCreatingMode({});
@@ -67,11 +63,7 @@ export function ModesSettings(props: IStackProps) {
   return (
     <SafeArea>
       <Stack flex={1} py="3" {...props}>
-        <FlatList
-          flex={1}
-          data={modeEntries}
-          renderItem={renderItemMemoized}
-        />
+        <FlatList flex={1} data={modeEntries} renderItem={renderItemMemoized} />
         <HStack mx="2" mt="2" space={2}>
           <Button
             flex={1}
