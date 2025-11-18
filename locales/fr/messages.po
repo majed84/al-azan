@@ -1946,6 +1946,11 @@ msgstr "Ragheb Mustafa Ghalwash"
 msgid "reminders_settings"
 msgstr "Rappels"
 
+#. screen title
+#: src/navigation/types.ts:113
+msgid "modes_settings"
+msgstr "Mode Silencieux"
+
 #: src/navigation/types.ts:46
 msgid "settings"
 msgstr "Paramètres"
