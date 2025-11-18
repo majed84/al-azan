@@ -1329,6 +1329,54 @@ msgstr "اعلان هشدار بعدی نمایش داده شود؟"
 msgid "Silent"
 msgstr "بی صدا"
 
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Add Silent Mode"
+msgstr "افزودن حالت بی صدا"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Edit Silent Mode"
+msgstr "ویرایش حالت بی صدا"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "New Silent Mode"
+msgstr "حالت بی صدای جدید"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Silent Mode Name"
+msgstr "نام حالت بی صدا"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Start before prayer (minutes)"
+msgstr "شروع قبل از نماز (دقیقه)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "End after prayer (minutes)"
+msgstr "پایان بعد از نماز (دقیقه)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Vibration on call"
+msgstr "ویبره هنگام تماس"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Started"
+msgstr "حالت بی صدا شروع شد"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Ended"
+msgstr "حالت بی صدا پایان یافت"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent mode activated"
+msgstr "حالت بی صدا فعال شد"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Normal mode restored"
+msgstr "حالت عادی بازگردانده شد"
+
+#: src/constants/notification.ts:XX
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "حالت بی صدا"
+
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"

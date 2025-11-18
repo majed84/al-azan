@@ -1325,6 +1325,54 @@ msgstr "Yaklaşan alarm bildirimi gösterilsin mi?"
 msgid "Silent"
 msgstr "Sessiz"
 
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Add Silent Mode"
+msgstr "Sessiz Mod Ekle"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Edit Silent Mode"
+msgstr "Sessiz Modu Düzenle"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "New Silent Mode"
+msgstr "Yeni Sessiz Mod"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Silent Mode Name"
+msgstr "Sessiz Mod Adı"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Start before prayer (minutes)"
+msgstr "Namaz öncesi başlat (dakika)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "End after prayer (minutes)"
+msgstr "Namaz sonrası bitir (dakika)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Vibration on call"
+msgstr "Arama sırasında titreşim"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Started"
+msgstr "Sessiz Mod Başladı"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Ended"
+msgstr "Sessiz Mod Sona Erdi"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent mode activated"
+msgstr "Sessiz mod etkinleştirildi"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Normal mode restored"
+msgstr "Normal mod geri yüklendi"
+
+#: src/constants/notification.ts:XX
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "Sessiz Mod"
+
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"

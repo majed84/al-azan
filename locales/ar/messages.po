@@ -335,22 +335,6 @@ msgstr "تم تحديث الإحداثيات"
 msgid "Copy"
 msgstr "نسخ"
 
-#: src/screens/settings_modes/index.tsx:XX
-msgid "Add Silent Mode"
-msgstr "إضافة وضع صامت"
-
-#: src/screens/settings_modes/index.tsx:XX
-msgid "Grant Permissions"
-msgstr "منح الصلاحيات"
-
-#: src/screens/settings_modes/index.tsx:XX
-msgid "Permissions OK"
-msgstr "الصلاحيات موافق عليها"
-
-#: src/screens/settings_modes/index.tsx:XX
-msgid "Silent mode requires system permissions to work properly"
-msgstr "الوضع الصامت يتطلب صلاحيات النظام للعمل بشكل صحيح"
-
 #: src/screens/qada_counter/edit_counter_modal.tsx:145
 msgid "Count"
 msgstr "عدد"
@@ -1344,6 +1328,54 @@ msgstr "إظهار إشعار التنبيه القادم؟"
 #: src/components/audio_picker.tsx:119
 msgid "Silent"
 msgstr "صامت"
+
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Add Silent Mode"
+msgstr "إضافة وضع صامت"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Edit Silent Mode"
+msgstr "تعديل الوضع الصامت"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "New Silent Mode"
+msgstr "وضع صامت جديد"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Silent Mode Name"
+msgstr "اسم الوضع الصامت"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Start before prayer (minutes)"
+msgstr "البدء قبل الصلاة (دقائق)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "End after prayer (minutes)"
+msgstr "الانتهاء بعد الصلاة (دقائق)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Vibration on call"
+msgstr "اهتزاز عند المكالمة"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Started"
+msgstr "تم تفعيل الوضع الصامت"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Ended"
+msgstr "تم إنهاء الوضع الصامت"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent mode activated"
+msgstr "تم تفعيل الوضع الصامت"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Normal mode restored"
+msgstr "تم استعادة الوضع العادي"
+
+#: src/constants/notification.ts:XX
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "الوضع الصامت"
 
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110

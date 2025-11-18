@@ -1325,6 +1325,58 @@ msgstr "Tampilkan pemberitahuan alarm yang akan datang?"
 
 #: src/components/audio_picker.tsx:119
 msgid "Silent"
+msgstr "Senyap"
+
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Add Silent Mode"
+msgstr "Tambah Mode Senyap"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Edit Silent Mode"
+msgstr "Edit Mode Senyap"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "New Silent Mode"
+msgstr "Mode Senyap Baru"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Silent Mode Name"
+msgstr "Nama Mode Senyap"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Start before prayer (minutes)"
+msgstr "Mulai sebelum sholat (menit)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "End after prayer (minutes)"
+msgstr "Berakhir setelah sholat (menit)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Vibration on call"
+msgstr "Getar saat panggilan"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Started"
+msgstr "Mode Senyap Dimulai"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Ended"
+msgstr "Mode Senyap Berakhir"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent mode activated"
+msgstr "Mode senyap diaktifkan"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Normal mode restored"
+msgstr "Mode normal dipulihkan"
+
+#: src/constants/notification.ts:XX
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "Mode Senyap"
+
+#: src/components/audio_picker.tsx:119
+msgid "Silent"
 msgstr "Diam"
 
 #: fastlane/update/update.ts:74

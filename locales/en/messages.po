@@ -1338,6 +1338,54 @@ msgstr "Show upcoming alarm notification?"
 msgid "Silent"
 msgstr "Silent"
 
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Add Silent Mode"
+msgstr "Add Silent Mode"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Edit Silent Mode"
+msgstr "Edit Silent Mode"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "New Silent Mode"
+msgstr "New Silent Mode"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Silent Mode Name"
+msgstr "Silent Mode Name"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Start before prayer (minutes)"
+msgstr "Start before prayer (minutes)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "End after prayer (minutes)"
+msgstr "End after prayer (minutes)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Vibration on call"
+msgstr "Vibration on call"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Started"
+msgstr "Silent Mode Started"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Ended"
+msgstr "Silent Mode Ended"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent mode activated"
+msgstr "Silent mode activated"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Normal mode restored"
+msgstr "Normal mode restored"
+
+#: src/constants/notification.ts:XX
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "Silent Mode"
+
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
@@ -1903,6 +1951,11 @@ msgstr "Ragheb Mustafa Ghalwash"
 #: src/navigation/types.ts:109
 msgid "reminders_settings"
 msgstr "Reminders"
+
+#. screen title
+#: src/navigation/types.ts:113
+msgid "modes_settings"
+msgstr "Silent Mode"
 
 #: src/navigation/types.ts:46
 msgid "settings"
