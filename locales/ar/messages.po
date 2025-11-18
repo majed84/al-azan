@@ -1373,10 +1373,6 @@ msgstr "تم تفعيل الوضع الصامت"
 msgid "Normal mode restored"
 msgstr "تم استعادة الوضع العادي"
 
-#: src/constants/notification.ts:XX
-msgid "PRAYER_MODE_CHANNEL_NAME"
-msgstr "الوضع الصامت"
-
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"

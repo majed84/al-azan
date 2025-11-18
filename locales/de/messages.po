@@ -1332,6 +1332,54 @@ msgstr "Benachrichtigung über den bevorstehenden Alarm anzeigen?"
 msgid "Silent"
 msgstr "Stumm"
 
+#: src/screens/settings_modes/index.tsx:XX
+msgid "Add Silent Mode"
+msgstr "Stummschaltung hinzufügen"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Edit Silent Mode"
+msgstr "Stummschaltung bearbeiten"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "New Silent Mode"
+msgstr "Neue Stummschaltung"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Silent Mode Name"
+msgstr "Name der Stummschaltung"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Start before prayer (minutes)"
+msgstr "Beginn vor dem Gebet (Minuten)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "End after prayer (minutes)"
+msgstr "Ende nach dem Gebet (Minuten)"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:XX
+msgid "Vibration on call"
+msgstr "Vibration bei Anruf"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Started"
+msgstr "Stummschaltung gestartet"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent Mode Ended"
+msgstr "Stummschaltung beendet"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Silent mode activated"
+msgstr "Stummschaltung aktiviert"
+
+#: src/tasks/set_prayer_mode.ts:XX
+msgid "Normal mode restored"
+msgstr "Normaler Modus wiederhergestellt"
+
+#: src/constants/notification.ts:XX
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "Stummschaltung"
+
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
@@ -1894,6 +1942,11 @@ msgstr "Ragheb Mustafa Ghalwash"
 #: src/navigation/types.ts:109
 msgid "reminders_settings"
 msgstr "Erinnerungen"
+
+#. screen title
+#: src/navigation/types.ts:113
+msgid "modes_settings"
+msgstr "Stummschaltung"
 
 #: src/navigation/types.ts:46
 msgid "settings"
