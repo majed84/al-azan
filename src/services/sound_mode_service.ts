@@ -1,7 +1,7 @@
-import {NativeModules, Alert} from 'react-native';
+import {NativeModules, Alert, Platform} from 'react-native';
 import {PermissionsService} from './permissions_service';
 
-const {SystemSetting} = NativeModules;
+const {SystemSetting, SoundControlModule} = NativeModules;
 
 export class SoundModeService {
   private static originalVolume: number | null = null;
@@ -47,15 +47,41 @@ export class SoundModeService {
         this.originalRingerMode = await SystemSetting.getRingerMode();
       }
 
-      // تعيين الوضع الصامت
-      if (vibrationOnCall) {
-        await SystemSetting.setRingerMode(1); // RINGER_MODE_VIBRATE
+      // استخدام Native Module الجديد إذا كان متوفراً
+      if (SoundControlModule) {
+        // تعيين الوضع الصامت
+        const ringerMode = vibrationOnCall ? 1 : 0; // VIBRATE or SILENT
+        await SoundControlModule.setRingerMode(ringerMode);
+        
+        // تقليل مستوى الصوت لجميع أنواع الصوت
+        await SoundControlModule.setVolume(0, 'ring');
+        await SoundControlModule.setVolume(0, 'music');
+        await SoundControlModule.setVolume(0, 'notification');
+        await SoundControlModule.setVolume(0, 'system');
       } else {
-        await SystemSetting.setRingerMode(0); // RINGER_MODE_SILENT
-      }
+        // استخدام المكتبة القديمة
+        if (Platform.Version >= 23) {
+          const hasDoNotDisturbAccess = await PermissionsService.checkDoNotDisturbAccess();
+          
+          if (hasDoNotDisturbAccess) {
+            await SystemSetting.setRingerMode(vibrationOnCall ? 4 : 5);
+          } else {
+            await PermissionsService.requestDoNotDisturbAccess();
+            return false;
+          }
+        } else {
+          if (vibrationOnCall) {
+            await SystemSetting.setRingerMode(1);
+          } else {
+            await SystemSetting.setRingerMode(0);
+          }
+        }
 
-      // تقليل مستوى الصوت
-      await SystemSetting.setVolume(0);
+        await SystemSetting.setVolume(0, 'ring');
+        await SystemSetting.setVolume(0, 'music');
+        await SystemSetting.setVolume(0, 'notification');
+        await SystemSetting.setVolume(0, 'system');
+      }
 
       console.log('Silent mode enabled with vibration:', vibrationOnCall);
       return true;
@@ -96,12 +122,27 @@ export class SoundModeService {
 
       // استعادة الإعدادات الأصلية
       if (this.originalRingerMode !== null) {
-        await SystemSetting.setRingerMode(this.originalRingerMode);
+        if (SoundControlModule) {
+          await SoundControlModule.setRingerMode(this.originalRingerMode);
+        } else {
+          await SystemSetting.setRingerMode(this.originalRingerMode);
+        }
         this.originalRingerMode = null;
       }
 
       if (this.originalVolume !== null) {
-        await SystemSetting.setVolume(this.originalVolume);
+        // استعادة مستوى الصوت لجميع الأنواع
+        if (SoundControlModule) {
+          await SoundControlModule.setVolume(this.originalVolume, 'ring');
+          await SoundControlModule.setVolume(this.originalVolume, 'music');
+          await SoundControlModule.setVolume(this.originalVolume, 'notification');
+          await SoundControlModule.setVolume(this.originalVolume, 'system');
+        } else {
+          await SystemSetting.setVolume(this.originalVolume, 'ring');
+          await SystemSetting.setVolume(this.originalVolume, 'music');
+          await SystemSetting.setVolume(this.originalVolume, 'notification');
+          await SystemSetting.setVolume(this.originalVolume, 'system');
+        }
         this.originalVolume = null;
       }
 
@@ -118,7 +159,12 @@ export class SoundModeService {
    */
   static async isSilentModeActive(): Promise<boolean> {
     try {
-      const ringerMode = await SystemSetting.getRingerMode();
+      let ringerMode;
+      if (SoundControlModule) {
+        ringerMode = await SoundControlModule.getRingerMode();
+      } else {
+        ringerMode = await SystemSetting.getRingerMode();
+      }
       return ringerMode === 0 || ringerMode === 1; // SILENT or VIBRATE
     } catch (error) {
       console.error('Error checking silent mode:', error);

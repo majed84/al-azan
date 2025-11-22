@@ -32,6 +32,7 @@ class MainApplication : Application(), ReactApplication {
                     add(NotificationWidgetModulePackage())
                     add(ScreenWidgetModulePackage())
                     add(CompassModulePackage())
+                    add(SoundControlModulePackage())
                 }
 
             override fun getJSMainModuleName(): String = "index"

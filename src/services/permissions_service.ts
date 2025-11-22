@@ -6,7 +6,7 @@ import {
   PermissionsAndroid,
 } from 'react-native';
 
-const {SystemSetting} = NativeModules;
+const {SystemSetting, SoundControlModule} = NativeModules;
 
 export class PermissionsService {
   /**
@@ -16,6 +16,10 @@ export class PermissionsService {
     if (Platform.OS !== 'android') return false;
 
     try {
+      // استخدام Native Module الجديد إذا كان متوفراً
+      if (SoundControlModule && SoundControlModule.canModifySystemSettings) {
+        return await SoundControlModule.canModifySystemSettings();
+      }
       return await SystemSetting.canWrite();
     } catch (error) {
       console.error('Error checking system settings permission:', error);
@@ -83,7 +87,12 @@ export class PermissionsService {
           text: 'فتح الإعدادات',
           onPress: async () => {
             try {
-              await SystemSetting.openAppSystemSettings();
+              // استخدام Native Module الجديد
+              if (SoundControlModule && SoundControlModule.openSystemSettings) {
+                await SoundControlModule.openSystemSettings();
+              } else {
+                await SystemSetting.openAppSystemSettings();
+              }
             } catch (error) {
               console.error('Error opening system settings:', error);
               // محاولة بديلة
@@ -132,12 +141,69 @@ export class PermissionsService {
   }
 
   /**
+   * التحقق من صلاحية Do Not Disturb (Android 6+)
+   */
+  static async checkDoNotDisturbAccess(): Promise<boolean> {
+    if (Platform.OS !== 'android' || Platform.Version < 23) return true;
+
+    try {
+      // استخدام Native Module الجديد
+      if (SoundControlModule && SoundControlModule.isDoNotDisturbGranted) {
+        return await SoundControlModule.isDoNotDisturbGranted();
+      }
+      return await SystemSetting.isDoNotDisturbGranted();
+    } catch (error) {
+      console.error('Error checking Do Not Disturb access:', error);
+      return false;
+    }
+  }
+
+  /**
+   * طلب صلاحية Do Not Disturb
+   */
+  static async requestDoNotDisturbAccess(): Promise<void> {
+    if (Platform.OS !== 'android' || Platform.Version < 23) return;
+
+    Alert.alert(
+      'صلاحية مطلوبة',
+      'يحتاج التطبيق إلى صلاحية التحكم في وضع عدم الإزعاج لتفعيل الوضع الصامت.',
+      [
+        {
+          text: 'إلغاء',
+          style: 'cancel',
+        },
+        {
+          text: 'فتح الإعدادات',
+          onPress: async () => {
+            try {
+              // استخدام Native Module الجديد
+              if (SoundControlModule && SoundControlModule.openDoNotDisturbSettings) {
+                await SoundControlModule.openDoNotDisturbSettings();
+              } else {
+                await SystemSetting.openDoNotDisturbSetting();
+              }
+            } catch (error) {
+              console.error('Error opening DND settings:', error);
+              Linking.openSettings();
+            }
+          },
+        },
+      ],
+    );
+  }
+
+  /**
    * إظهار رسالة توضيحية للمستخدم
    */
   static showPermissionExplanation(): void {
+    const androidVersion = Platform.Version;
+    const message = androidVersion >= 23 
+      ? 'لتفعيل الوضع الصامت، يحتاج التطبيق إلى:\n\n• صلاحية تعديل إعدادات الصوت\n• صلاحية تعديل إعدادات النظام\n• صلاحية التحكم في وضع عدم الإزعاج\n\nهذا سيسمح للتطبيق بجعل الهاتف صامتاً تلقائياً قبل الصلاة.'
+      : 'لتفعيل الوضع الصامت، يحتاج التطبيق إلى:\n\n• صلاحية تعديل إعدادات الصوت\n• صلاحية تعديل إعدادات النظام\n\nهذا سيسمح للتطبيق بجعل الهاتف صامتاً تلقائياً قبل الصلاة.';
+
     Alert.alert(
       'الوضع الصامت',
-      'لتفعيل الوضع الصامت، يحتاج التطبيق إلى:\n\n• صلاحية تعديل إعدادات الصوت\n• صلاحية تعديل إعدادات النظام\n\nهذا سيسمح للتطبيق بجعل الهاتف صامتاً تلقائياً قبل الصلاة.',
+      message,
       [
         {
           text: 'إلغاء',
