@@ -88,12 +88,5 @@
 
   <uses-permission android:name="android.permission.VIBRATE"/>
   <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-  <!-- صلاحيات للتحكم في إعدادات الصوت والنظام -->
-  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-  <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-  <!-- صلاحية للتحكم في وضع عدم الإزعاج (Android 6+) -->
-  <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-  <!-- صلاحية للتحكم في إعدادات النظام (Android 6+) -->
-  <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions" />
 
 </manifest>
