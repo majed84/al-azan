@@ -6,6 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: vi\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:159
@@ -41,7 +47,7 @@ msgstr "60 phút"
 msgid "90 min"
 msgstr "90 phút"
 
-#: src/constants/notification.ts:25
+#: src/constants/notification.ts:27
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "Azan"
 
@@ -80,6 +86,10 @@ msgstr "Thêm Âm báo Tùy chỉnh"
 #: src/screens/settings_reminders/index.tsx:80
 msgid "Add Reminder"
 msgstr "Thêm Lời nhắc"
+
+#: src/screens/settings_modes/index.tsx:70
+msgid "Add Silent Mode"
+msgstr ""
 
 #: src/screens/qada_counter/index.tsx:89
 msgid "Add new counter"
@@ -217,6 +227,8 @@ msgstr "Lịch"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
+#: src/screens/settings_modes/edit_mode_modal.tsx:113
+#: src/screens/settings_modes/edit_mode_modal.tsx:232
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:127
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:305
 msgid "Cancel"
@@ -319,6 +331,7 @@ msgstr "Cảm biến la bàn không khả dụng"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
+#: src/screens/settings_modes/edit_mode_modal.tsx:231
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:304
 msgid "Confirm"
 msgstr "Xác nhận"
@@ -331,6 +344,7 @@ msgstr "Liên tục"
 msgid "Coordinates updated"
 msgstr "Đã cập nhật tọa độ"
 
+#: src/screens/settings_modes/index.tsx:38
 #: src/screens/settings_reminders/index.tsx:44
 msgid "Copy"
 msgstr "Sao chép"
@@ -382,6 +396,7 @@ msgstr "Mặc định"
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
+#: src/screens/settings_modes/mode_item.tsx:125
 #: src/screens/settings_reminders/reminder_item.tsx:125
 #: src/utils/dialogs.ts:9
 msgid "Delete"
@@ -408,7 +423,7 @@ msgid "Disclaimer"
 msgstr "Lưu ý"
 
 #: src/screens/fullscreen_alarm/index.tsx:153
-#: src/tasks/set_alarm.ts:106
+#: src/tasks/set_alarm.ts:112
 #: src/utils/dialogs.ts:73
 msgid "Dismiss"
 msgstr "Bỏ qua"
@@ -454,6 +469,7 @@ msgid "Eastern Arabic"
 msgstr "Đông Ả Rập"
 
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
+#: src/screens/settings_modes/mode_item.tsx:111
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
 msgstr "Sửa"
@@ -474,6 +490,10 @@ msgstr "Sửa Vị trí"
 msgid "Edit Reminder"
 msgstr "Sửa Lời nhắc"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:108
+msgid "Edit Silent Mode"
+msgstr ""
+
 #: src/adhan/calculation_methods.ts:32
 msgid "Egyptian General Survey Authority"
 msgstr "Tổng cục Khảo sát Ai Cập"
@@ -481,6 +501,10 @@ msgstr "Tổng cục Khảo sát Ai Cập"
 #: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Enabled"
 msgstr "Đã bật"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:163
+msgid "End after prayer (minutes)"
+msgstr ""
 
 #: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
@@ -526,7 +550,7 @@ msgid "Find My Location"
 msgstr "Tìm Vị trí của Tôi"
 
 #. screen title
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:101
 #: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "Khắc phục Sự cố Thường gặp"
@@ -614,7 +638,7 @@ msgstr "Tuy nhiên, khi dùng các dịch vụ trực tuyến, chẳng hạn nh�
 msgid "I Understand"
 msgstr "Tôi hiểu"
 
-#: src/constants/notification.ts:49
+#: src/constants/notification.ts:55
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "Quan trọng"
 
@@ -815,6 +839,7 @@ msgstr "Ngôn ngữ âm lịch"
 msgid "Maghrib Angle"
 msgstr "Góc Maghrib"
 
+#: src/screens/settings_modes/mode_item.tsx:131
 #: src/screens/settings_reminders/reminder_item.tsx:131
 msgid "Make a Copy"
 msgstr "Tạo Bản sao"
@@ -887,6 +912,10 @@ msgstr "Vị trí mới"
 msgid "New Reminder"
 msgstr "Lời nhắc Mới"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:108
+msgid "New Silent Mode"
+msgstr ""
+
 #: src/screens/intro/intro.tsx:100
 #: src/screens/settings_dev/index.tsx:39
 #: src/tasks/set_next_adhan.ts:85
@@ -924,6 +953,10 @@ msgstr "Không làm tròn"
 #: src/screens/settings_calculation_advanced/index.tsx:72
 msgid "None (Automatic)"
 msgstr "Không có (Tự động)"
+
+#: src/tasks/set_prayer_mode.ts:122
+msgid "Normal mode restored"
+msgstr ""
 
 #: src/utils/permission.ts:189
 msgid "Not now"
@@ -969,6 +1002,7 @@ msgstr "OK"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "Từ Android 12 trở lên, ứng dụng cũng cần có quyền báo thức để hoạt động bình thường, vì vậy bạn cũng phải cho phép điều này."
 
+#: src/screens/settings_modes/mode_item.tsx:38
 #: src/screens/settings_notifications/vibration_setting.tsx:28
 #: src/screens/settings_reminders/reminder_item.tsx:38
 msgid "Once"
@@ -979,6 +1013,7 @@ msgid "One-Seventh of the Night"
 msgstr "Một phần bảy đêm"
 
 #. shown in add/edit reminder dialog
+#: src/screens/settings_modes/edit_mode_modal.tsx:191
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:260
 msgid "Only once?"
 msgstr "Chỉ một lần?"
@@ -1005,6 +1040,7 @@ msgstr "Kho mã nguồn mở"
 msgid "Open-source"
 msgstr "Mã nguồn mở"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:174
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:257
 msgid "Options"
 msgstr "Tùy chọn"
@@ -1029,11 +1065,15 @@ msgstr "Định hướng: Tự xoay"
 msgid "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
 msgstr "Các thiết bị từ tính khác có thể gây nhiễu la bàn điện thoại của bạn và la bàn của bạn có thể cần hiệu chỉnh."
 
-#: src/constants/notification.ts:29
+#: src/constants/notification.ts:51
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr ""
+
+#: src/constants/notification.ts:31
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "Azan sắp tới"
 
-#: src/constants/notification.ts:45
+#: src/constants/notification.ts:47
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "Lời nhắc sắp tới"
 
@@ -1074,10 +1114,15 @@ msgstr "Phân giải vùng cực"
 msgid "Power Manager"
 msgstr "Quản lý Pin"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:129
+msgid "Prayer"
+msgstr ""
+
 #: website/src/_includes/home.tsx:38
 msgid "Prayer Times"
 msgstr "Giờ cầu nguyện"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:131
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:220
 msgid "Prayer list"
 msgstr "Danh sách cầu nguyện"
@@ -1138,7 +1183,7 @@ msgstr "Công cụ tìm Qibla cần dịch vụ định vị. Nếu không bật
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Bản đồ Qibla hiện không khả dụng trong các bản dựng F-Droid. Nó có thể sẽ khả dụng ở các bản cập nhật tương lai."
 
-#: src/constants/notification.ts:41
+#: src/constants/notification.ts:43
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "Lời nhắc"
 
@@ -1328,6 +1373,22 @@ msgstr "Hiện thông báo báo thức sắp tới?"
 msgid "Silent"
 msgstr "Im lặng"
 
+#: src/tasks/set_prayer_mode.ts:120
+msgid "Silent Mode Ended"
+msgstr ""
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:119
+msgid "Silent Mode Name"
+msgstr ""
+
+#: src/tasks/set_prayer_mode.ts:102
+msgid "Silent Mode Started"
+msgstr ""
+
+#: src/tasks/set_prayer_mode.ts:104
+msgid "Silent mode activated"
+msgstr ""
+
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
@@ -1369,6 +1430,10 @@ msgstr "Âm báo"
 #: src/adhan/calculation_methods.ts:110
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "Cơ quan Quản lý Tinh thần của người Hồi giáo ở Nga"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:151
+msgid "Start before prayer (minutes)"
+msgstr ""
 
 #: src/screens/settings_fix_common_problems/index.tsx:63
 msgid "Status"
@@ -1580,15 +1645,20 @@ msgstr "Phiên bản"
 msgid "Vibration Mode"
 msgstr "Chế độ rung"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:177
+#: src/screens/settings_modes/mode_item.tsx:34
+msgid "Vibration on call"
+msgstr ""
+
 #: src/screens/settings_notifications_advanced/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "Nút âm lượng dừng Azan"
 
-#: src/constants/notification.ts:33
+#: src/constants/notification.ts:35
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "Tiện ích"
 
-#: src/constants/notification.ts:37
+#: src/constants/notification.ts:39
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "Cập nhật Tiện ích"
 
@@ -1687,7 +1757,7 @@ msgid "about.credits.google"
 msgstr "Hầu hết các biểu tượng trong ứng dụng này là từ Google material icons."
 
 #. screen title
-#: src/navigation/types.ts:114
+#: src/navigation/types.ts:120
 msgid "about_settings"
 msgstr "Về Ứng dụng"
 
@@ -1709,7 +1779,7 @@ msgid "asr.prayer"
 msgstr "Asr"
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:56
 msgid "backup_settings"
 msgstr "Sao lưu"
 
@@ -1718,17 +1788,17 @@ msgid "before"
 msgstr "trước"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:91
 msgid "calculation_adjustments_settings"
 msgstr "Điều chỉnh"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:96
 msgid "calculation_advanced_settings"
 msgstr "Cài đặt Tính toán Nâng cao"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:86
 msgid "calculation_settings"
 msgstr "Phép tính"
 
@@ -1754,7 +1824,7 @@ msgid "date.second"
 msgstr "giây"
 
 #. screen title
-#: src/navigation/types.ts:119
+#: src/navigation/types.ts:125
 msgid "dev_settings"
 msgstr "Nhà phát triển"
 
@@ -1763,7 +1833,7 @@ msgid "dhuhr.prayer"
 msgstr "Dhuhr"
 
 #. screen title
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:61
 msgid "display_settings"
 msgstr "Hiển thị"
 
@@ -1772,7 +1842,7 @@ msgid "fajr.prayer"
 msgstr "Fajr"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:141
+#: src/navigation/types.ts:147
 msgid "favorite_location"
 msgstr "Vị trí yêu thích"
 
@@ -1789,7 +1859,7 @@ msgid "from settings"
 msgstr "từ cài đặt"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:51
 msgid "fullscreen_alarm"
 msgstr "Đang phát Azan"
 
@@ -1798,7 +1868,7 @@ msgstr "Đang phát Azan"
 msgid "hijri.adjustment.hint"
 msgstr "Số ngày sẽ được thêm vào âm lịch"
 
-#: src/navigation/types.ts:42
+#: src/navigation/types.ts:43
 msgid "home"
 msgstr "Trang chủ"
 
@@ -1806,7 +1876,7 @@ msgstr "Trang chủ"
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
 msgstr "Nếu bật, một thông báo sẽ được hiển thị khoảng một tiếng trước mỗi lần cầu nguyện hoặc lời nhắc nào có âm báo"
 
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:39
 msgid "intro"
 msgstr "giới thiệu"
 
@@ -1824,7 +1894,7 @@ msgid "later"
 msgstr "sau đó"
 
 #. screen title
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:66
 msgid "location_settings"
 msgstr "Vị trí"
 
@@ -1844,41 +1914,46 @@ msgstr "phút"
 msgid "moazen_zade"
 msgstr "Moazen Zade"
 
-#: src/navigation/types.ts:147
+#. screen title
+#: src/navigation/types.ts:115
+msgid "modes_settings"
+msgstr ""
+
+#: src/navigation/types.ts:153
 msgid "monthly_view"
 msgstr "Chế độ xem tháng"
 
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:81
 msgid "muezzin_settings"
 msgstr "Muezzin"
 
 #. screen title
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:76
 msgid "notification_advanced_settings"
 msgstr "Cài đặt nâng cao"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:71
 msgid "notification_settings"
 msgstr "Thông báo & Âm báo"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:136
+#: src/navigation/types.ts:142
 msgid "qada_counter"
 msgstr "Bộ đếm Qada"
 
-#: src/navigation/types.ts:132
+#: src/navigation/types.ts:138
 msgid "qibla_compass"
 msgstr "La bàn Qibla"
 
-#: src/navigation/types.ts:124
+#: src/navigation/types.ts:130
 msgid "qibla_finder"
 msgstr "Tìm Qibla"
 
-#: src/navigation/types.ts:128
+#: src/navigation/types.ts:134
 msgid "qibla_map"
 msgstr "Bản đồ Qibla"
 
@@ -1887,11 +1962,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "Ragheb Mustafa Ghalwash"
 
 #. screen title
-#: src/navigation/types.ts:109
+#: src/navigation/types.ts:110
 msgid "reminders_settings"
 msgstr "Lời nhắc"
 
-#: src/navigation/types.ts:46
+#: src/navigation/types.ts:47
 msgid "settings"
 msgstr "Cài đặt"
 
@@ -1925,9 +2000,13 @@ msgid "sunset"
 msgstr "Lặn (mặt trời)"
 
 #. screen title
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:105
 msgid "widget_settings"
 msgstr "Cài đặt Tiện ích"
+
+#: src/screens/settings_modes/mode_item.tsx:31
+msgid "{0} min before {prayer} - {1} min after"
+msgstr ""
 
 #: src/screens/settings_reminders/reminder_item.tsx:35
 msgid "{durationInMinutes} min after {prayer}"

@@ -6,6 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: hi\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:159
@@ -41,7 +47,7 @@ msgstr "60 मिनट"
 msgid "90 min"
 msgstr "90 मिनट"
 
-#: src/constants/notification.ts:25
+#: src/constants/notification.ts:27
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "अज़ान"
 
@@ -80,6 +86,10 @@ msgstr "कस्टम ऑडियो जोड़ें"
 #: src/screens/settings_reminders/index.tsx:80
 msgid "Add Reminder"
 msgstr "अनुस्मारक जोड़ें"
+
+#: src/screens/settings_modes/index.tsx:70
+msgid "Add Silent Mode"
+msgstr ""
 
 #: src/screens/qada_counter/index.tsx:89
 msgid "Add new counter"
@@ -217,6 +227,8 @@ msgstr "पंचांग"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
+#: src/screens/settings_modes/edit_mode_modal.tsx:113
+#: src/screens/settings_modes/edit_mode_modal.tsx:232
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:127
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:305
 msgid "Cancel"
@@ -319,6 +331,7 @@ msgstr "कम्पास सेंसर अनुपलब्ध"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
+#: src/screens/settings_modes/edit_mode_modal.tsx:231
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:304
 msgid "Confirm"
 msgstr "पुष्टि करें "
@@ -331,6 +344,7 @@ msgstr "निरंतर"
 msgid "Coordinates updated"
 msgstr "निर्देशांक अपडेट किए गए"
 
+#: src/screens/settings_modes/index.tsx:38
 #: src/screens/settings_reminders/index.tsx:44
 msgid "Copy"
 msgstr "प्रतिलिपि"
@@ -382,6 +396,7 @@ msgstr "डिफॉल्ट "
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
+#: src/screens/settings_modes/mode_item.tsx:125
 #: src/screens/settings_reminders/reminder_item.tsx:125
 #: src/utils/dialogs.ts:9
 msgid "Delete"
@@ -408,7 +423,7 @@ msgid "Disclaimer"
 msgstr "अस्वीकरण"
 
 #: src/screens/fullscreen_alarm/index.tsx:153
-#: src/tasks/set_alarm.ts:106
+#: src/tasks/set_alarm.ts:112
 #: src/utils/dialogs.ts:73
 msgid "Dismiss"
 msgstr "हटा दीजिए"
@@ -454,6 +469,7 @@ msgid "Eastern Arabic"
 msgstr "पूर्वी अरबी"
 
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
+#: src/screens/settings_modes/mode_item.tsx:111
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
 msgstr "संपादन करना"
@@ -474,6 +490,10 @@ msgstr "स्थान संपादित करें"
 msgid "Edit Reminder"
 msgstr "रिमाइंडर संपादित करें"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:108
+msgid "Edit Silent Mode"
+msgstr ""
+
 #: src/adhan/calculation_methods.ts:32
 msgid "Egyptian General Survey Authority"
 msgstr "मिस्र का सामान्य सर्वेक्षण प्राधिकरण"
@@ -481,6 +501,10 @@ msgstr "मिस्र का सामान्य सर्वेक्षण
 #: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Enabled"
 msgstr "सक्रिय"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:163
+msgid "End after prayer (minutes)"
+msgstr ""
 
 #: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
@@ -526,7 +550,7 @@ msgid "Find My Location"
 msgstr "मेरा स्थान खोजें"
 
 #. screen title
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:101
 #: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "सामान्य समस्याओं को ठीक करें"
@@ -614,7 +638,7 @@ msgstr "हालाँकि, किबला मानचित्र जै�
 msgid "I Understand"
 msgstr "मैं समझता हूँ"
 
-#: src/constants/notification.ts:49
+#: src/constants/notification.ts:55
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "महत्वपूर्ण"
 
@@ -815,6 +839,7 @@ msgstr "चंद्र कैलेंडर भाषा"
 msgid "Maghrib Angle"
 msgstr "मगरिब कोण"
 
+#: src/screens/settings_modes/mode_item.tsx:131
 #: src/screens/settings_reminders/reminder_item.tsx:131
 msgid "Make a Copy"
 msgstr "एक प्रतिलिपि बना लो"
@@ -887,6 +912,10 @@ msgstr "नया स्थान"
 msgid "New Reminder"
 msgstr "नया अनुस्मारक"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:108
+msgid "New Silent Mode"
+msgstr ""
+
 #: src/screens/intro/intro.tsx:100
 #: src/screens/settings_dev/index.tsx:39
 #: src/tasks/set_next_adhan.ts:85
@@ -924,6 +953,10 @@ msgstr "कोई नहीं"
 #: src/screens/settings_calculation_advanced/index.tsx:72
 msgid "None (Automatic)"
 msgstr "कोई नहीं (स्वचालित)"
+
+#: src/tasks/set_prayer_mode.ts:122
+msgid "Normal mode restored"
+msgstr ""
 
 #: src/utils/permission.ts:189
 msgid "Not now"
@@ -969,6 +1002,7 @@ msgstr "ठीक"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "एंड्रॉइड 12 और नए पर, ऐप को ठीक से काम करने के लिए अलार्म की अनुमति की भी आवश्यकता होती है, इसलिए आपको इसे भी अनुमति देनी होगी।"
 
+#: src/screens/settings_modes/mode_item.tsx:38
 #: src/screens/settings_notifications/vibration_setting.tsx:28
 #: src/screens/settings_reminders/reminder_item.tsx:38
 msgid "Once"
@@ -979,6 +1013,7 @@ msgid "One-Seventh of the Night"
 msgstr "रात का एक-सातवां हिस्सा"
 
 #. shown in add/edit reminder dialog
+#: src/screens/settings_modes/edit_mode_modal.tsx:191
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:260
 msgid "Only once?"
 msgstr "सिर्फ एक बार?"
@@ -1005,6 +1040,7 @@ msgstr "ओपन सोर्स रिपॉजिटरी"
 msgid "Open-source"
 msgstr "खुला स्त्रोत"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:174
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:257
 msgid "Options"
 msgstr "विकल्प"
@@ -1029,11 +1065,15 @@ msgstr "दिशा: खुला"
 msgid "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
 msgstr "अन्य चुंबकीय उपकरण आपके फ़ोन के कंपास में हस्तक्षेप कर सकते हैं और आपके कंपास को अंशांकन की आवश्यकता हो सकती है।"
 
-#: src/constants/notification.ts:29
+#: src/constants/notification.ts:51
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr ""
+
+#: src/constants/notification.ts:31
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "आगामी अधन"
 
-#: src/constants/notification.ts:45
+#: src/constants/notification.ts:47
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "आगामी अनुस्मारक"
 
@@ -1074,10 +1114,15 @@ msgstr "ध्रुवीय रेज़ोल्यूशन "
 msgid "Power Manager"
 msgstr "पावर मैनेजर"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:129
+msgid "Prayer"
+msgstr ""
+
 #: website/src/_includes/home.tsx:38
 msgid "Prayer Times"
 msgstr "प्रार्थना का समय"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:131
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:220
 msgid "Prayer list"
 msgstr "प्रार्थना सूची"
@@ -1138,7 +1183,7 @@ msgstr "किबला खोजक को स्थान सेवा की 
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "Qibla नक्शा वर्तमान में F-Droid बिल्ड में उपलब्ध नहीं है। यह भविष्य के अपडेट में उपलब्ध हो सकता है।"
 
-#: src/constants/notification.ts:41
+#: src/constants/notification.ts:43
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "अनुस्मारक"
 
@@ -1325,6 +1370,22 @@ msgstr "आगामी अलार्म सूचना दिखाएं?"
 msgid "Silent"
 msgstr "चुपचाप"
 
+#: src/tasks/set_prayer_mode.ts:120
+msgid "Silent Mode Ended"
+msgstr ""
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:119
+msgid "Silent Mode Name"
+msgstr ""
+
+#: src/tasks/set_prayer_mode.ts:102
+msgid "Silent Mode Started"
+msgstr ""
+
+#: src/tasks/set_prayer_mode.ts:104
+msgid "Silent mode activated"
+msgstr ""
+
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
 msgid "Since we don't use any kind of tracker or crash analytics, please report any problem or suggestion you have on our github repo"
@@ -1363,6 +1424,10 @@ msgstr "ध्वनि"
 #: src/adhan/calculation_methods.ts:110
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "रूस के मुसलमानों का आध्यात्मिक प्रशासन"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:151
+msgid "Start before prayer (minutes)"
+msgstr ""
 
 #: src/screens/settings_fix_common_problems/index.tsx:63
 msgid "Status"
@@ -1574,15 +1639,20 @@ msgstr "संस्करण"
 msgid "Vibration Mode"
 msgstr "कंपन मोड"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:177
+#: src/screens/settings_modes/mode_item.tsx:34
+msgid "Vibration on call"
+msgstr ""
+
 #: src/screens/settings_notifications_advanced/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "वॉल्यूम बटन अदन को रोकता है"
 
-#: src/constants/notification.ts:33
+#: src/constants/notification.ts:35
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "विजेट"
 
-#: src/constants/notification.ts:37
+#: src/constants/notification.ts:39
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "विजेट अद्यतन"
 
@@ -1681,7 +1751,7 @@ msgid "about.credits.google"
 msgstr "इस ऐप में इस्तेमाल होने वाले ज्यादातर आइकन गूगल मटेरियल आइकन के हैं।"
 
 #. screen title
-#: src/navigation/types.ts:114
+#: src/navigation/types.ts:120
 msgid "about_settings"
 msgstr "के बारे में"
 
@@ -1703,7 +1773,7 @@ msgid "asr.prayer"
 msgstr "असर "
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:56
 msgid "backup_settings"
 msgstr "बैकअप"
 
@@ -1712,17 +1782,17 @@ msgid "before"
 msgstr "इस से पहले"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:91
 msgid "calculation_adjustments_settings"
 msgstr "समायोजन"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:96
 msgid "calculation_advanced_settings"
 msgstr "उन्नत गणना सेटिंग्स"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:86
 msgid "calculation_settings"
 msgstr "गणना"
 
@@ -1748,7 +1818,7 @@ msgid "date.second"
 msgstr "सेकंड"
 
 #. screen title
-#: src/navigation/types.ts:119
+#: src/navigation/types.ts:125
 msgid "dev_settings"
 msgstr "डेवलपर"
 
@@ -1757,7 +1827,7 @@ msgid "dhuhr.prayer"
 msgstr "ज़ुहर "
 
 #. screen title
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:61
 msgid "display_settings"
 msgstr "डिस्प्ले"
 
@@ -1766,7 +1836,7 @@ msgid "fajr.prayer"
 msgstr "फज्र"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:141
+#: src/navigation/types.ts:147
 msgid "favorite_location"
 msgstr "पसंदीदा स्थान"
 
@@ -1783,7 +1853,7 @@ msgid "from settings"
 msgstr "सेटिंग्स से"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:51
 msgid "fullscreen_alarm"
 msgstr "अज़ान प्ले हो रही है"
 
@@ -1792,7 +1862,7 @@ msgstr "अज़ान प्ले हो रही है"
 msgid "hijri.adjustment.hint"
 msgstr "चंद्र कैलेंडर में जोड़े जाने वाले दिनों की संख्या"
 
-#: src/navigation/types.ts:42
+#: src/navigation/types.ts:43
 msgid "home"
 msgstr "घर"
 
@@ -1800,7 +1870,7 @@ msgstr "घर"
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
 msgstr "यदि सक्षम है, तो किसी भी प्रार्थना के समय या ध्वनि वाले रिमाइंडर से लगभग एक घंटे पहले एक सूचना दिखाई जाएगी"
 
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:39
 msgid "intro"
 msgstr "परिचय"
 
@@ -1818,7 +1888,7 @@ msgid "later"
 msgstr "बाद में"
 
 #. screen title
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:66
 msgid "location_settings"
 msgstr "स्थान"
 
@@ -1838,41 +1908,46 @@ msgstr "मिनट"
 msgid "moazen_zade"
 msgstr "मोअज़न ज़ादे"
 
-#: src/navigation/types.ts:147
+#. screen title
+#: src/navigation/types.ts:115
+msgid "modes_settings"
+msgstr ""
+
+#: src/navigation/types.ts:153
 msgid "monthly_view"
 msgstr "मासिक दृश्य"
 
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:81
 msgid "muezzin_settings"
 msgstr "मुअज़्ज़िन"
 
 #. screen title
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:76
 msgid "notification_advanced_settings"
 msgstr "एडवांस सेटिंग"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:71
 msgid "notification_settings"
 msgstr "सूचना और ध्वनि"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:136
+#: src/navigation/types.ts:142
 msgid "qada_counter"
 msgstr "कड़ा काउंटर"
 
-#: src/navigation/types.ts:132
+#: src/navigation/types.ts:138
 msgid "qibla_compass"
 msgstr "किबला कम्पास"
 
-#: src/navigation/types.ts:124
+#: src/navigation/types.ts:130
 msgid "qibla_finder"
 msgstr "किबला खोजक"
 
-#: src/navigation/types.ts:128
+#: src/navigation/types.ts:134
 msgid "qibla_map"
 msgstr "किबला नक्शा"
 
@@ -1881,11 +1956,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "राघेब मुस्तफा गलवाश"
 
 #. screen title
-#: src/navigation/types.ts:109
+#: src/navigation/types.ts:110
 msgid "reminders_settings"
 msgstr "अनुस्मारक"
 
-#: src/navigation/types.ts:46
+#: src/navigation/types.ts:47
 msgid "settings"
 msgstr "समायोजन"
 
@@ -1919,9 +1994,13 @@ msgid "sunset"
 msgstr "सूर्यास्त"
 
 #. screen title
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:105
 msgid "widget_settings"
 msgstr "विजेट सेटिंग्स"
+
+#: src/screens/settings_modes/mode_item.tsx:31
+msgid "{0} min before {prayer} - {1} min after"
+msgstr ""
 
 #: src/screens/settings_reminders/reminder_item.tsx:35
 msgid "{durationInMinutes} min after {prayer}"

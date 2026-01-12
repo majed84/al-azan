@@ -1,0 +1,10 @@
+// Fix Build Tools version for all subprojects
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                buildToolsVersion = "34.0.0"
+            }
+        }
+    }
+}

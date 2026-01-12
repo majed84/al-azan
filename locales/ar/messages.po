@@ -6,6 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ar\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #: src/screens/settings_notifications_advanced/custom_upcoming_time_setting.tsx:34
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:159
@@ -41,7 +47,7 @@ msgstr "60 دقيقة"
 msgid "90 min"
 msgstr "90 دقيقة"
 
-#: src/constants/notification.ts:25
+#: src/constants/notification.ts:27
 msgid "ADHAN_CHANNEL_NAME"
 msgstr "أذان"
 
@@ -80,6 +86,10 @@ msgstr "إضافة صوت مخصص"
 #: src/screens/settings_reminders/index.tsx:80
 msgid "Add Reminder"
 msgstr "إضافة تذكير"
+
+#: src/screens/settings_modes/index.tsx:70
+msgid "Add Silent Mode"
+msgstr "إضافة وضع صامت"
 
 #: src/screens/qada_counter/index.tsx:89
 msgid "Add new counter"
@@ -217,6 +227,8 @@ msgstr "التقويم"
 #: src/screens/qada_counter/edit_counter_modal.tsx:120
 #: src/screens/qada_counter/edit_counter_modal.tsx:167
 #: src/screens/settings_adhan/index.tsx:241
+#: src/screens/settings_modes/edit_mode_modal.tsx:113
+#: src/screens/settings_modes/edit_mode_modal.tsx:232
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:127
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:305
 msgid "Cancel"
@@ -319,6 +331,7 @@ msgstr "مستشعر البوصلة غير متوفر"
 
 #: src/screens/favorite_locations/edit_favorite_location_modal.tsx:144
 #: src/screens/qada_counter/edit_counter_modal.tsx:166
+#: src/screens/settings_modes/edit_mode_modal.tsx:231
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:304
 msgid "Confirm"
 msgstr "تأكيد"
@@ -331,6 +344,7 @@ msgstr "مستمر"
 msgid "Coordinates updated"
 msgstr "تم تحديث الإحداثيات"
 
+#: src/screens/settings_modes/index.tsx:38
 #: src/screens/settings_reminders/index.tsx:44
 msgid "Copy"
 msgstr "نسخ"
@@ -382,6 +396,7 @@ msgstr "افتراضي"
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:77
 #: src/screens/settings_adhan/adhan_list_item.tsx:102
 #: src/screens/settings_adhan/adhan_list_item.tsx:209
+#: src/screens/settings_modes/mode_item.tsx:125
 #: src/screens/settings_reminders/reminder_item.tsx:125
 #: src/utils/dialogs.ts:9
 msgid "Delete"
@@ -408,7 +423,7 @@ msgid "Disclaimer"
 msgstr "تنويه"
 
 #: src/screens/fullscreen_alarm/index.tsx:153
-#: src/tasks/set_alarm.ts:106
+#: src/tasks/set_alarm.ts:112
 #: src/utils/dialogs.ts:73
 msgid "Dismiss"
 msgstr "تجاهل"
@@ -454,6 +469,7 @@ msgid "Eastern Arabic"
 msgstr "الأرقام العربية الشرقية"
 
 #: src/screens/favorite_locations/favorite_location_list_item_view.tsx:63
+#: src/screens/settings_modes/mode_item.tsx:111
 #: src/screens/settings_reminders/reminder_item.tsx:111
 msgid "Edit"
 msgstr "تعديل"
@@ -474,6 +490,10 @@ msgstr "تعديل الموقع"
 msgid "Edit Reminder"
 msgstr "تحرير تذكير"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:108
+msgid "Edit Silent Mode"
+msgstr "تعديل الوضع الصامت"
+
 #: src/adhan/calculation_methods.ts:32
 msgid "Egyptian General Survey Authority"
 msgstr "الهيئة العامة المصرية للمساحة"
@@ -481,6 +501,10 @@ msgstr "الهيئة العامة المصرية للمساحة"
 #: src/screens/settings_fix_common_problems/index.tsx:65
 msgid "Enabled"
 msgstr "مفعّل"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:163
+msgid "End after prayer (minutes)"
+msgstr "الانتهاء بعد الصلاة (دقائق)"
 
 #: src/screens/settings_location/location_coordinates.tsx:75
 msgid "Error getting clipboard data"
@@ -526,7 +550,7 @@ msgid "Find My Location"
 msgstr "ابحث عن موقعي"
 
 #. screen title
-#: src/navigation/types.ts:100
+#: src/navigation/types.ts:101
 #: src/screens/intro/intro.tsx:40
 msgid "Fix Common Problems"
 msgstr "إصلاح المشاكل الشائعة"
@@ -614,7 +638,7 @@ msgstr "ومع ذلك، عند استخدام الخدمات عبر الإنتر
 msgid "I Understand"
 msgstr "أفهم"
 
-#: src/constants/notification.ts:49
+#: src/constants/notification.ts:55
 msgid "IMPORTANT_CHANNEL_ID"
 msgstr "مهم"
 
@@ -815,6 +839,7 @@ msgstr "لغة التقويم القمري"
 msgid "Maghrib Angle"
 msgstr "زاوية المغرب"
 
+#: src/screens/settings_modes/mode_item.tsx:131
 #: src/screens/settings_reminders/reminder_item.tsx:131
 msgid "Make a Copy"
 msgstr "أنشئ نسخة"
@@ -887,6 +912,10 @@ msgstr "إضافة موقع جديد"
 msgid "New Reminder"
 msgstr "تذكير جديد"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:108
+msgid "New Silent Mode"
+msgstr "وضع صامت جديد"
+
 #: src/screens/intro/intro.tsx:100
 #: src/screens/settings_dev/index.tsx:39
 #: src/tasks/set_next_adhan.ts:85
@@ -924,6 +953,10 @@ msgstr "لا شيء"
 #: src/screens/settings_calculation_advanced/index.tsx:72
 msgid "None (Automatic)"
 msgstr "لا شيء (تلقائي)"
+
+#: src/tasks/set_prayer_mode.ts:122
+msgid "Normal mode restored"
+msgstr "تم استعادة الوضع العادي"
 
 #: src/utils/permission.ts:189
 msgid "Not now"
@@ -969,6 +1002,7 @@ msgstr "موافق"
 msgid "On Android 12 and newer, the app also needs alarms permission to work properly, so you must allow this as well."
 msgstr "على أندرويد 12 والأحدث، يحتاج التطبيق أيضًا إلى إذن التنبيهات للعمل بشكل صحيح، لذا يجب عليك السماح بهذا أيضًا."
 
+#: src/screens/settings_modes/mode_item.tsx:38
 #: src/screens/settings_notifications/vibration_setting.tsx:28
 #: src/screens/settings_reminders/reminder_item.tsx:38
 msgid "Once"
@@ -979,6 +1013,7 @@ msgid "One-Seventh of the Night"
 msgstr "سبع الليل"
 
 #. shown in add/edit reminder dialog
+#: src/screens/settings_modes/edit_mode_modal.tsx:191
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:260
 msgid "Only once?"
 msgstr "مرة واحدة فقط؟"
@@ -1005,6 +1040,7 @@ msgstr "مستودع مفتوح المصدر"
 msgid "Open-source"
 msgstr "مفتوح المصدر"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:174
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:257
 msgid "Options"
 msgstr "خيارات"
@@ -1029,11 +1065,15 @@ msgstr "الاتجاه: مفتوح"
 msgid "Other magnetic devices may interfere with your phone's compass and your compass may need calibration."
 msgstr "قد يتعارض الأجهزة المغناطيسية الأخرى مع بوصلة هاتفك وقد تحتاج بوصلتك إلى معايرة."
 
-#: src/constants/notification.ts:29
+#: src/constants/notification.ts:51
+msgid "PRAYER_MODE_CHANNEL_NAME"
+msgstr "الوضع الصامت"
+
+#: src/constants/notification.ts:31
 msgid "PRE_ADHAN_CHANNEL_NAME"
 msgstr "الآذان القادم"
 
-#: src/constants/notification.ts:45
+#: src/constants/notification.ts:47
 msgid "PRE_REMINDER_CHANNEL_NAME"
 msgstr "التذكير القادم"
 
@@ -1074,10 +1114,15 @@ msgstr "دقة الأقطاب"
 msgid "Power Manager"
 msgstr "مدير الطاقة"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:129
+msgid "Prayer"
+msgstr "الصلاة"
+
 #: website/src/_includes/home.tsx:38
 msgid "Prayer Times"
 msgstr "أوقات الصلاة"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:131
 #: src/screens/settings_reminders/edit_reminder_modal.tsx:220
 msgid "Prayer list"
 msgstr "قائمة الصلاة"
@@ -1138,13 +1183,9 @@ msgstr "يحتاج مُحدد القبلة إلى خدمة الموقع. إذا 
 msgid "Qibla map is currently unavailable in F-Droid builds. It may become available in future updates."
 msgstr "خريطة القبلة غير متوفرة حاليًا في نسخ F-Droid. قد تصبح متاحة في تحديثات مستقبلية."
 
-#: src/constants/notification.ts:41
+#: src/constants/notification.ts:43
 msgid "REMINDER_CHANNEL_NAME"
 msgstr "تذكير"
-
-#: src/constants/notification.ts:XX
-msgid "PRAYER_MODE_CHANNEL_NAME"
-msgstr "الوضع الصامت"
 
 #: src/utils/ramadan.ts:61
 msgid "Ramadan is ending,"
@@ -1329,49 +1370,21 @@ msgstr "إظهار إشعار التنبيه القادم؟"
 msgid "Silent"
 msgstr "صامت"
 
-#: src/screens/settings_modes/index.tsx:XX
-msgid "Add Silent Mode"
-msgstr "إضافة وضع صامت"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Edit Silent Mode"
-msgstr "تعديل الوضع الصامت"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "New Silent Mode"
-msgstr "وضع صامت جديد"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Silent Mode Name"
-msgstr "اسم الوضع الصامت"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Start before prayer (minutes)"
-msgstr "البدء قبل الصلاة (دقائق)"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "End after prayer (minutes)"
-msgstr "الانتهاء بعد الصلاة (دقائق)"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Vibration on call"
-msgstr "اهتزاز عند المكالمة"
-
-#: src/tasks/set_prayer_mode.ts:XX
-msgid "Silent Mode Started"
-msgstr "تم تفعيل الوضع الصامت"
-
-#: src/tasks/set_prayer_mode.ts:XX
+#: src/tasks/set_prayer_mode.ts:120
 msgid "Silent Mode Ended"
 msgstr "تم إنهاء الوضع الصامت"
 
-#: src/tasks/set_prayer_mode.ts:XX
-msgid "Silent mode activated"
+#: src/screens/settings_modes/edit_mode_modal.tsx:119
+msgid "Silent Mode Name"
+msgstr "اسم الوضع الصامت"
+
+#: src/tasks/set_prayer_mode.ts:102
+msgid "Silent Mode Started"
 msgstr "تم تفعيل الوضع الصامت"
 
-#: src/tasks/set_prayer_mode.ts:XX
-msgid "Normal mode restored"
-msgstr "تم استعادة الوضع العادي"
+#: src/tasks/set_prayer_mode.ts:104
+msgid "Silent mode activated"
+msgstr "تم تفعيل الوضع الصامت"
 
 #: fastlane/update/update.ts:74
 #: website/src/_includes/home.tsx:110
@@ -1411,6 +1424,10 @@ msgstr "صوت"
 #: src/adhan/calculation_methods.ts:110
 msgid "Spiritual Administration of Muslims of Russia"
 msgstr "الإدارة الروحية لمسلمي روسيا"
+
+#: src/screens/settings_modes/edit_mode_modal.tsx:151
+msgid "Start before prayer (minutes)"
+msgstr "البدء قبل الصلاة (دقائق)"
 
 #: src/screens/settings_fix_common_problems/index.tsx:63
 msgid "Status"
@@ -1622,15 +1639,20 @@ msgstr "إصدار"
 msgid "Vibration Mode"
 msgstr "وضع الاهتزاز"
 
+#: src/screens/settings_modes/edit_mode_modal.tsx:177
+#: src/screens/settings_modes/mode_item.tsx:34
+msgid "Vibration on call"
+msgstr "اهتزاز عند المكالمة"
+
 #: src/screens/settings_notifications_advanced/volume_button_setting.tsx:22
 msgid "Volume button stops adhan"
 msgstr "زر الصوت يوقف الأذان"
 
-#: src/constants/notification.ts:33
+#: src/constants/notification.ts:35
 msgid "WIDGET_CHANNEL_NAME"
 msgstr "المصغر"
 
-#: src/constants/notification.ts:37
+#: src/constants/notification.ts:39
 msgid "WIDGET_UPDATE_CHANNEL_NAME"
 msgstr "تحدیث المصغّر"
 
@@ -1732,7 +1754,7 @@ msgid "about.credits.google"
 msgstr "معظم الأيقونات المستخدمة في هذا التطبيق هي من Google Material Icons."
 
 #. screen title
-#: src/navigation/types.ts:114
+#: src/navigation/types.ts:120
 msgid "about_settings"
 msgstr "عن التطبيق"
 
@@ -1754,7 +1776,7 @@ msgid "asr.prayer"
 msgstr "عصر"
 
 #. screen title
-#: src/navigation/types.ts:55
+#: src/navigation/types.ts:56
 msgid "backup_settings"
 msgstr "النسخ الاحتياطي"
 
@@ -1763,17 +1785,17 @@ msgid "before"
 msgstr "قبل"
 
 #. screen title
-#: src/navigation/types.ts:90
+#: src/navigation/types.ts:91
 msgid "calculation_adjustments_settings"
 msgstr "التعديلات"
 
 #. screen title
-#: src/navigation/types.ts:95
+#: src/navigation/types.ts:96
 msgid "calculation_advanced_settings"
 msgstr "إعدادات الحسابات المتقدمة"
 
 #. screen title
-#: src/navigation/types.ts:85
+#: src/navigation/types.ts:86
 msgid "calculation_settings"
 msgstr "حساب"
 
@@ -1799,7 +1821,7 @@ msgid "date.second"
 msgstr "ثانية"
 
 #. screen title
-#: src/navigation/types.ts:119
+#: src/navigation/types.ts:125
 msgid "dev_settings"
 msgstr "مطور"
 
@@ -1808,7 +1830,7 @@ msgid "dhuhr.prayer"
 msgstr "ظهر"
 
 #. screen title
-#: src/navigation/types.ts:60
+#: src/navigation/types.ts:61
 msgid "display_settings"
 msgstr "العرض"
 
@@ -1817,7 +1839,7 @@ msgid "fajr.prayer"
 msgstr "فجر"
 
 #. Title of the page where you add your favorite locations for faster switch
-#: src/navigation/types.ts:141
+#: src/navigation/types.ts:147
 msgid "favorite_location"
 msgstr "المواقع المفضلة"
 
@@ -1834,7 +1856,7 @@ msgid "from settings"
 msgstr "من الإعدادات"
 
 #. screen title
-#: src/navigation/types.ts:50
+#: src/navigation/types.ts:51
 msgid "fullscreen_alarm"
 msgstr "تشغيل الأذان"
 
@@ -1843,7 +1865,7 @@ msgstr "تشغيل الأذان"
 msgid "hijri.adjustment.hint"
 msgstr "عدد الأيام التي ستتم إضافتها إلى التقويم القمري"
 
-#: src/navigation/types.ts:42
+#: src/navigation/types.ts:43
 msgid "home"
 msgstr "الرئيسية"
 
@@ -1851,7 +1873,7 @@ msgstr "الرئيسية"
 msgid "if enabled, a notification will be shown around one hour before any prayer time or reminder that has sound"
 msgstr "في حالة التمكين، سيتم عرض إشعار قبل حوالي ساعة واحدة من أي وقت صلاة أو تذكير به صوت"
 
-#: src/navigation/types.ts:38
+#: src/navigation/types.ts:39
 msgid "intro"
 msgstr "مقدمة"
 
@@ -1869,7 +1891,7 @@ msgid "later"
 msgstr "لاحقاً"
 
 #. screen title
-#: src/navigation/types.ts:65
+#: src/navigation/types.ts:66
 msgid "location_settings"
 msgstr "موقع"
 
@@ -1889,41 +1911,46 @@ msgstr "دقيقة"
 msgid "moazen_zade"
 msgstr "مؤذن زاده"
 
-#: src/navigation/types.ts:147
+#. screen title
+#: src/navigation/types.ts:115
+msgid "modes_settings"
+msgstr "الوضع الصامت"
+
+#: src/navigation/types.ts:153
 msgid "monthly_view"
 msgstr "عرض شهري"
 
 #. screen title
 #: src/components/audio_picker.tsx:90
 #: src/components/prayer_adhan.tsx:45
-#: src/navigation/types.ts:80
+#: src/navigation/types.ts:81
 msgid "muezzin_settings"
 msgstr "المؤذن"
 
 #. screen title
-#: src/navigation/types.ts:75
+#: src/navigation/types.ts:76
 msgid "notification_advanced_settings"
 msgstr "إعدادات متقدمة"
 
 #. screen title
-#: src/navigation/types.ts:70
+#: src/navigation/types.ts:71
 msgid "notification_settings"
 msgstr "الإشعار و الصوت"
 
 #. Title of the page where you can count your Qada prayers and fast
-#: src/navigation/types.ts:136
+#: src/navigation/types.ts:142
 msgid "qada_counter"
 msgstr "عداد القضاء"
 
-#: src/navigation/types.ts:132
+#: src/navigation/types.ts:138
 msgid "qibla_compass"
 msgstr "بوصلة القبلة"
 
-#: src/navigation/types.ts:124
+#: src/navigation/types.ts:130
 msgid "qibla_finder"
 msgstr "مُحدد القبلة"
 
-#: src/navigation/types.ts:128
+#: src/navigation/types.ts:134
 msgid "qibla_map"
 msgstr "خريطة القبلة"
 
@@ -1932,59 +1959,11 @@ msgid "ragheb_mustafa_ghalwash"
 msgstr "راغب مصطفى غلوش"
 
 #. screen title
-#: src/navigation/types.ts:109
+#: src/navigation/types.ts:110
 msgid "reminders_settings"
 msgstr "التذكيرات"
 
-#: src/navigation/types.ts:113
-msgid "modes_settings"
-msgstr "الوضع الصامت"
-
-#: src/navigation/types.ts:113
-msgid "Silent Mode"
-msgstr "الوضع الصامت"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Edit Silent Mode"
-msgstr "تعديل الوضع الصامت"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "New Silent Mode"
-msgstr "وضع صامت جديد"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Silent Mode Name"
-msgstr "اسم الوضع الصامت"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Start before prayer (minutes)"
-msgstr "البدء قبل الصلاة (دقائق)"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "End after prayer (minutes)"
-msgstr "الانتهاء بعد الصلاة (دقائق)"
-
-#: src/screens/settings_modes/edit_mode_modal.tsx:XX
-msgid "Vibration on call"
-msgstr "اهتزاز عند المكالمة"
-
-#: src/tasks/set_prayer_mode.ts:XX
-msgid "Silent Mode Started"
-msgstr "تم تفعيل الوضع الصامت"
-
-#: src/tasks/set_prayer_mode.ts:XX
-msgid "Silent Mode Ended"
-msgstr "تم إنهاء الوضع الصامت"
-
-#: src/tasks/set_prayer_mode.ts:XX
-msgid "Silent mode activated"
-msgstr "تم تفعيل الوضع الصامت"
-
-#: src/tasks/set_prayer_mode.ts:XX
-msgid "Normal mode restored"
-msgstr "تم استعادة الوضع العادي"
-
-#: src/navigation/types.ts:46
+#: src/navigation/types.ts:47
 msgid "settings"
 msgstr "إعدادات"
 
@@ -2018,9 +1997,13 @@ msgid "sunset"
 msgstr "غروب الشمس"
 
 #. screen title
-#: src/navigation/types.ts:104
+#: src/navigation/types.ts:105
 msgid "widget_settings"
 msgstr "إعدادات المصغر"
+
+#: src/screens/settings_modes/mode_item.tsx:31
+msgid "{0} min before {prayer} - {1} min after"
+msgstr ""
 
 #: src/screens/settings_reminders/reminder_item.tsx:35
 msgid "{durationInMinutes} min after {prayer}"
