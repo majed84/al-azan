@@ -33,7 +33,7 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-
+import android.media.AudioManager;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
@@ -42,11 +42,12 @@ public class ActivityModule extends ReactContextBaseJavaModule {
     private static final int REQUEST_ENABLE_DATA_ROAMING = 1001;
     private static final int REQUEST_ENABLE_WIFI = 1002;
     private static final int REQUEST_ENABLE_DND_SETTINGS = 1003;
-
+    private AudioManager audioManager;
     private static final String TAG = "ActivityModule";
 
     ActivityModule(ReactApplicationContext context) {
         super(context);
+        this.audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
     }
 
     @NonNull
@@ -271,7 +272,16 @@ public class ActivityModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void isNotificationPolicyAccessGranted(final Promise promise) {
         NotificationManager notificationManager = (NotificationManager) getReactApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-        promise.resolve(notificationManager.isNotificationPolicyAccessGranted());
+        boolean b = notificationManager.isNotificationPolicyAccessGranted();
+        if (b) {
+            audioManager.adjustStreamVolume(AudioManager.STREAM_RING, AudioManager.ADJUST_MUTE, 0);
+            audioManager.adjustStreamVolume(AudioManager.STREAM_NOTIFICATION, AudioManager.ADJUST_MUTE, 0);
+        } else {
+            //Log.d(TAG, "isNotificationPolicyAccessGranted: DND permission not granted");
+            audioManager.adjustStreamVolume(AudioManager.STREAM_RING, AudioManager.ADJUST_UNMUTE, 0);
+            audioManager.adjustStreamVolume(AudioManager.STREAM_NOTIFICATION, AudioManager.ADJUST_UNMUTE, 0);
+        }
+        promise.resolve(b);
     }
 
     @ReactMethod

@@ -33,15 +33,18 @@ export class PermissionsService {
   static async canModifyAudioSettings(): Promise<boolean> {
     if (Platform.OS !== 'android') return false;
 
-    try {
-      const result = await PermissionsAndroid.check(
-        PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS,
-      );
-      return result;
-    } catch (error) {
-      console.error('Error checking audio settings permission:', error);
-      return false;
+   try {
+    const perm = PermissionsAndroid.PERMISSIONS?.MODIFY_AUDIO_SETTINGS;
+    if (!perm) {
+      // على بعض نسخ RN/Android هذه القيمة غير متاحة، والصلاحية عادة normal (ممنوحة عند التثبيت)
+      return true;
     }
+    const result = await PermissionsAndroid.check(perm);
+    return result;
+  } catch (error) {
+    console.error('Error checking audio settings permission:', error);
+    return false;
+  }
   }
 
   /**
@@ -50,20 +53,23 @@ export class PermissionsService {
   static async requestAudioSettingsPermission(): Promise<boolean> {
     if (Platform.OS !== 'android') return false;
 
-    try {
-      const result = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.MODIFY_AUDIO_SETTINGS,
-        {
-          title: 'صلاحية تعديل الصوت',
-          message:
-            'يحتاج التطبيق إلى صلاحية تعديل إعدادات الصوت لتفعيل الوضع الصامت',
-          buttonNeutral: 'اسأل لاحقاً',
-          buttonNegative: 'إلغاء',
-          buttonPositive: 'موافق',
-        },
-      );
-      return result === PermissionsAndroid.RESULTS.GRANTED;
-    } catch (error) {
+   try {
+    const perm = PermissionsAndroid.PERMISSIONS?.MODIFY_AUDIO_SETTINGS;
+    if (!perm) {
+      // لا حاجة لطلب runtime إذا لم يتوفر الثابت أو إذا كانت permission من النوع normal
+      return true;
+    }
+
+    const result = await PermissionsAndroid.request(perm, {
+      title: 'صلاحية تعديل الصوت',
+      message:
+        'يحتاج التطبيق إلى صلاحية تعديل إعدادات الصوت لتفعيل الوضع الصامت',
+      buttonNeutral: 'اسأل لاحقاً',
+      buttonNegative: 'إلغاء',
+      buttonPositive: 'موافق',
+    });
+    return result === PermissionsAndroid.RESULTS.GRANTED;
+  } catch (error) {
       console.error('Error requesting audio settings permission:', error);
       return false;
     }
@@ -110,15 +116,18 @@ export class PermissionsService {
   static async checkAllPermissions(): Promise<{
     canModifyAudio: boolean;
     canModifySystem: boolean;
+    canDoNotDisturb : boolean;
     allGranted: boolean;
   }> {
     const canModifyAudio = await this.canModifyAudioSettings();
     const canModifySystem = await this.canModifySystemSettings();
+    const canDoNotDisturb = await this.checkDoNotDisturbAccess();
 
     return {
       canModifyAudio,
       canModifySystem,
-      allGranted: canModifyAudio && canModifySystem,
+      canDoNotDisturb,
+      allGranted: canModifyAudio && canModifySystem && canDoNotDisturb,
     };
   }
 
@@ -136,8 +145,14 @@ export class PermissionsService {
       await this.requestSystemSettingsPermission();
       return false; // المستخدم يحتاج للذهاب للإعدادات يدوياً
     }
+ 
+    const dndGranted = await this.checkDoNotDisturbAccess();
+    if (!dndGranted) {
+      await this.requestDoNotDisturbAccess();
+      return false; // user must grant manually in settings
+    }
 
-    return audioGranted && systemGranted;
+    return audioGranted && systemGranted && dndGranted;
   }
 
   /**
@@ -197,7 +212,7 @@ export class PermissionsService {
    */
   static showPermissionExplanation(): void {
     const androidVersion = Platform.Version;
-    const message = androidVersion >= 23 
+    const message = Number.parseFloat(androidVersion.toString()) >= 23 
       ? 'لتفعيل الوضع الصامت، يحتاج التطبيق إلى:\n\n• صلاحية تعديل إعدادات الصوت\n• صلاحية تعديل إعدادات النظام\n• صلاحية التحكم في وضع عدم الإزعاج\n\nهذا سيسمح للتطبيق بجعل الهاتف صامتاً تلقائياً قبل الصلاة.'
       : 'لتفعيل الوضع الصامت، يحتاج التطبيق إلى:\n\n• صلاحية تعديل إعدادات الصوت\n• صلاحية تعديل إعدادات النظام\n\nهذا سيسمح للتطبيق بجعل الهاتف صامتاً تلقائياً قبل الصلاة.';
 

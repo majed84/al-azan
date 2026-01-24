@@ -230,6 +230,7 @@ async function handleNotification({
         }
         await setReminders();
       } else if (channelId === PRAYER_MODE_CHANNEL_ID) {
+        console.log('Prayer mode notification handled' + options.isPrayerMode + '--' + options.modeAction );
         // معالجة الأوضاع
         if (options.isPrayerMode) {
           if (options.modeAction === 'start') {

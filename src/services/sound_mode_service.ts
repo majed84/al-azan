@@ -38,7 +38,11 @@ export class SoundModeService {
 
         return false;
       }
-
+const hasDnd = await PermissionsService.checkDoNotDisturbAccess();
+if (!hasDnd) {
+  await PermissionsService.requestDoNotDisturbAccess();
+  return false;
+}
       // حفظ الإعدادات الحالية
       if (this.originalVolume === null) {
         this.originalVolume = await SystemSetting.getVolume();
@@ -48,7 +52,8 @@ export class SoundModeService {
       }
 
       // استخدام Native Module الجديد إذا كان متوفراً
-      if (SoundControlModule) {
+      if (SoundControlModule && SoundControlModule.setDoNotDisturb) {
+        
         // تعيين الوضع الصامت
         const ringerMode = vibrationOnCall ? 1 : 0; // VIBRATE or SILENT
         await SoundControlModule.setRingerMode(ringerMode);
@@ -58,9 +63,11 @@ export class SoundModeService {
         await SoundControlModule.setVolume(0, 'music');
         await SoundControlModule.setVolume(0, 'notification');
         await SoundControlModule.setVolume(0, 'system');
+        await SoundControlModule.setDoNotDisturb(true);
+
       } else {
         // استخدام المكتبة القديمة
-        if (Platform.Version >= 23) {
+        if (Number.parseFloat(Platform.Version.toString()) >= 23) {
           const hasDoNotDisturbAccess = await PermissionsService.checkDoNotDisturbAccess();
           
           if (hasDoNotDisturbAccess) {
@@ -132,11 +139,13 @@ export class SoundModeService {
 
       if (this.originalVolume !== null) {
         // استعادة مستوى الصوت لجميع الأنواع
-        if (SoundControlModule) {
+        if (SoundControlModule && SoundControlModule.setDoNotDisturb) {
+      
           await SoundControlModule.setVolume(this.originalVolume, 'ring');
           await SoundControlModule.setVolume(this.originalVolume, 'music');
           await SoundControlModule.setVolume(this.originalVolume, 'notification');
           await SoundControlModule.setVolume(this.originalVolume, 'system');
+          await SoundControlModule.setDoNotDisturb(false);
         } else {
           await SystemSetting.setVolume(this.originalVolume, 'ring');
           await SystemSetting.setVolume(this.originalVolume, 'music');

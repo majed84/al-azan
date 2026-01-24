@@ -7,6 +7,7 @@ import {EditModeModal} from '@/screens/settings_modes/edit_mode_modal';
 import ModeItem from '@/screens/settings_modes/mode_item';
 import {PrayerMode, modesSettings, useModesSettings} from '@/store/modes';
 import {setPrayerModes} from '@/tasks/set_prayer_mode';
+import { PermissionsService } from '@/services/permissions_service';
 
 export function ModesSettings(props: IStackProps) {
   const [modeEntries] = useModesSettings('PRAYER_MODES');
@@ -22,10 +23,15 @@ export function ModesSettings(props: IStackProps) {
     setCreatingMode(null);
   };
 
-  const onModeChange = useCallback((newModeState: PrayerMode) => {
-    modesSettings.getState().saveMode(newModeState);
-    setPrayerModes({modes: [newModeState], force: true});
-  }, []);
+const onModeChange = useCallback(async (newModeState: PrayerMode) => {
+  const ok = await PermissionsService.requestAllPermissions();
+  if (!ok) {
+    PermissionsService.showPermissionExplanation();
+    return;
+  }
+  modesSettings.getState().saveMode(newModeState);
+  setPrayerModes({ modes: [newModeState], force: true });
+}, []);
 
   const onModeDelete = useCallback((newModeState: PrayerMode) => {
     modesSettings.getState().deleteMode(newModeState);

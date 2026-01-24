@@ -16,7 +16,8 @@ public class SoundControlModule extends ReactContextBaseJavaModule {
     private final ReactApplicationContext reactContext;
     private AudioManager audioManager;
     private NotificationManager notificationManager;
-
+    private int previousInterruptionFilter = NotificationManager.INTERRUPTION_FILTER_ALL;
+    
     public SoundControlModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
@@ -29,6 +30,26 @@ public class SoundControlModule extends ReactContextBaseJavaModule {
         return "SoundControlModule";
     }
 
+@ReactMethod
+public void setDoNotDisturb(boolean enable, Promise promise) {
+    try {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!notificationManager.isNotificationPolicyAccessGranted()) {
+                promise.reject("PERMISSION_DENIED", "Do Not Disturb access not granted");
+                return;
+            }
+            if (enable) {
+                previousInterruptionFilter = notificationManager.getCurrentInterruptionFilter();
+                notificationManager.setInterruptionFilter(NotificationManager.INTERRUPTION_FILTER_NONE);
+            } else {
+                notificationManager.setInterruptionFilter(previousInterruptionFilter);
+            }
+        }
+        promise.resolve(true);
+    } catch (Exception e) {
+        promise.reject("ERROR", e.getMessage());
+    }
+}
     @ReactMethod
     public void setRingerMode(int mode, Promise promise) {
         try {
@@ -64,6 +85,13 @@ public class SoundControlModule extends ReactContextBaseJavaModule {
             int maxVolume = audioManager.getStreamMaxVolume(stream);
             int targetVolume = (int) ((volume / 100.0) * maxVolume);
             
+            if (targetVolume == 0) {
+              audioManager.adjustStreamVolume(stream, AudioManager.ADJUST_MUTE, 0);
+            } else {
+              audioManager.adjustStreamVolume(stream, AudioManager.ADJUST_UNMUTE, 0);
+              audioManager.setStreamVolume(stream, targetVolume, AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
+            }
+
             audioManager.setStreamVolume(stream, targetVolume, 0);
             promise.resolve(true);
         } catch (Exception e) {
