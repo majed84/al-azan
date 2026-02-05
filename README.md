@@ -38,6 +38,8 @@ Apks released on GitHub are per CPU architecture, if you don't know which one to
 
 * Set reminders before or after a prayer time
 
+* Silent mode — Mute Adhan notifications and sounds for chosen time ranges or events; schedule recurring quiet periods or enable it manually.
+
 * Homescreen and notification Widgets
 
 * Qibla finder
