@@ -1,2 +1,36 @@
 i18n_base.ts
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
 
+# Build
+android/app/build/
+android/build/
+ios/build/
+build/
+dist/
+
+# Android
+android/.gradle/
+android/local.properties
+*.keystore
+
+# iOS
+ios/Pods/
+*.xcworkspace
+*.xcuserdata
+*.xcuserstate
+*.moved-aside
+
+# Misc
+.DS_Store
+.env
+.env.*.local
+.vscode/
+.idea/
+tmp/
+coverage/
+*.log
